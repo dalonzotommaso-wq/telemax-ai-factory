@@ -1,0 +1,15 @@
+{
+  // ---------------------------------------------------------------------------
+  // Root TypeScript config for editors and repo-wide tooling.
+  //
+  // Build ordering is handled by Turborepo, not by project references, so this
+  // file does not use `references`. Each workspace package has its own
+  // tsconfig.json (typecheck) and tsconfig.build.json (emit). This root config
+  // is intentionally emit-free.
+  // ---------------------------------------------------------------------------
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "files": []
+}

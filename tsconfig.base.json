@@ -1,0 +1,81 @@
+{
+  // ---------------------------------------------------------------------------
+  // Shared TypeScript base configuration.
+  //
+  // Every package extends this file so that compiler strictness, module
+  // resolution and path aliases stay centralized (see architectural rule:
+  // "all configuration must be centralized"). Packages only override
+  // `rootDir`, `outDir` and their local `references`.
+  // ---------------------------------------------------------------------------
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    // --- Language & module system (ESM, Node 22 LTS) ---
+    "target": "ES2023",
+    "lib": ["ES2023"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "moduleDetection": "force",
+
+    // --- Emit ---
+    // NOTE: `composite`/project-references are intentionally NOT used. Build
+    // ordering is handled by Turborepo (`dependsOn: ["^build"]`), which lets
+    // each package run a plain `tsc` and keeps `--noEmit` typechecks legal
+    // (TypeScript forbids `noEmit` together with `composite`).
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "removeComments": false,
+    "importHelpers": false,
+    // Never emit JavaScript when the compile has type errors. Besides being
+    // safer, this prevents a failed build from scattering partial .js/.d.ts
+    // files next to the sources.
+    "noEmitOnError": true,
+
+    // --- Maximum-safety strictness ---
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "useUnknownInCatchVariables": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+
+    // --- Interop & correctness ---
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+
+    // --- Path aliases (centralized) ---
+    // Aliases point at each package's BUILT output (dist), matching how Node
+    // resolves the `@telemax/*` packages at runtime via their "exports". This
+    // keeps type resolution and runtime resolution identical and prevents one
+    // package's build from pulling another package's raw sources into its
+    // program (which would violate `rootDir`). Turborepo builds dependencies
+    // first, so the referenced dist always exists when a dependent compiles.
+    "baseUrl": ".",
+    "paths": {
+      "@telemax/core": ["core/dist/index.d.ts"],
+      "@telemax/core/*": ["core/dist/*"],
+      "@telemax/config": ["config/dist/index.d.ts"],
+      "@telemax/config/*": ["config/dist/*"],
+      "@telemax/generator-kit": ["packages/generator-kit/dist/index.d.ts"],
+      "@telemax/generator-kit/*": ["packages/generator-kit/dist/*"]
+    }
+  },
+  "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage"]
+}

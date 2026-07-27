@@ -1,0 +1,10 @@
+{
+  // Type-check/editor project for @telemax/core. Includes tests so the linter
+  // and the type checker see them. Emission is done by tsconfig.build.json.
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"]
+}

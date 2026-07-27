@@ -1,0 +1,34 @@
+{
+  "name": "@telemax/config",
+  "version": "0.1.0",
+  "description": "Centralized, strongly-typed configuration for Telemax AI Factory. Implements the ConfigProvider contract defined by @telemax/core.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@telemax/core": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

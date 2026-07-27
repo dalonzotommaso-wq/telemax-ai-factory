@@ -1,0 +1,20 @@
+# -----------------------------------------------------------------------------
+# pnpm workspace definition for the Telemax AI Factory monorepo.
+#
+# Each glob below is a workspace root. pnpm links these packages together with
+# symlinks, so intra-repo dependencies declared as "workspace:*" always resolve
+# to the local source of truth instead of a published registry version.
+#
+# Layout rationale (see docs/SPEC-001-Foundation.md):
+#   - core            The framework kernel. Depends on nothing internal.
+#   - config          Centralized, typed configuration. Depends on core.
+#   - packages/*      Feature packages and SDKs (e.g. generator-kit).
+#   - apps/*          Runnable applications (CLI, services) built on the above.
+#   - tools/*         Internal developer tooling and shared build helpers.
+# -----------------------------------------------------------------------------
+packages:
+  - "core"
+  - "config"
+  - "packages/*"
+  - "apps/*"
+  - "tools/*"

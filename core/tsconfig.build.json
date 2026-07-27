@@ -1,0 +1,6 @@
+{
+  // Build project: same settings as tsconfig.json but excludes test files from
+  // the emitted output.
+  "extends": "./tsconfig.json",
+  "exclude": ["src/**/*.test.ts", "src/**/*.spec.ts", "dist", "node_modules"]
+}

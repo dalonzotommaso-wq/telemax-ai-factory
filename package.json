@@ -1,0 +1,52 @@
+{
+  "name": "@telemax/ai-factory",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Telemax AI Factory — a plugin-first TypeScript framework and platform foundation for AI-driven generation of websites, landing pages, applications, software and digital products.",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "pnpm@9.15.0",
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "workspaces": [
+    "core",
+    "config",
+    "packages/*",
+    "apps/*",
+    "tools/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:watch": "turbo run test -- --watch",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "clean": "turbo run clean && rm -rf node_modules/.cache .turbo",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build && changeset publish",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "@changesets/cli": "2.27.11",
+    "@commitlint/cli": "19.6.1",
+    "@commitlint/config-conventional": "19.6.0",
+    "@eslint/js": "9.17.0",
+    "@types/node": "22.10.5",
+    "eslint": "9.17.0",
+    "eslint-config-prettier": "9.1.0",
+    "husky": "9.1.7",
+    "lint-staged": "15.3.0",
+    "prettier": "3.4.2",
+    "turbo": "2.3.3",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.19.1",
+    "vitest": "2.1.8"
+  }
+}

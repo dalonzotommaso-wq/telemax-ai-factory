@@ -1,0 +1,10 @@
+{
+  // Type-check/editor project for @telemax/generator-kit. Note the base config
+  // lives two levels up because this package sits under packages/.
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"]
+}

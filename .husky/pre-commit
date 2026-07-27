@@ -1,0 +1,2 @@
+# Run fast, staged-only quality gates before a commit is created.
+pnpm exec lint-staged

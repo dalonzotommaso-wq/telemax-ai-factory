@@ -1,0 +1,6 @@
+# Default owners for everything in the repository. Replace with real GitHub
+# teams/handles once the organization structure is in place.
+* @telemax/ai-factory-maintainers
+
+# The Core is the most sensitive area; require kernel maintainers explicitly.
+/core/ @telemax/core-maintainers

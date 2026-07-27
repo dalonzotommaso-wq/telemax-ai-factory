@@ -1,0 +1,7 @@
+# Build output and caches — never format generated artifacts.
+dist/
+coverage/
+.turbo/
+node_modules/
+pnpm-lock.yaml
+*.tsbuildinfo

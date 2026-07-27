@@ -1,0 +1,36 @@
+{
+  // ---------------------------------------------------------------------------
+  // Turborepo task pipeline.
+  //
+  // `dependsOn: ["^build"]` means a task waits for the same task to finish in
+  // all of a package's internal dependencies first, which is what guarantees
+  // the Core is built before the packages that depend on it.
+  // ---------------------------------------------------------------------------
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "stream",
+  "tasks": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": ["dist/**", "*.tsbuildinfo"]
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "lint": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "test": {
+      "dependsOn": ["^build"],
+      "outputs": []
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

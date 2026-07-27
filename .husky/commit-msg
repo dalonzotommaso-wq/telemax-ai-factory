@@ -1,0 +1,2 @@
+# Validate the commit message against the Conventional Commits rules.
+pnpm exec commitlint --edit "$1"

@@ -1,0 +1,85 @@
+/**
+ * Advertisement Blueprint: the standard ad positions of a news site — header,
+ * sidebar, in-article, footer, sticky, mobile and video — each with sizes and
+ * loading policy.
+ */
+export interface AdPosition {
+  readonly id: string;
+  readonly label: string;
+  readonly sizes: readonly string[];
+  readonly viewport: "all" | "desktop" | "mobile";
+  readonly lazy: boolean;
+  readonly sticky: boolean;
+}
+
+export interface AdvertisementBlueprint {
+  readonly positions: readonly AdPosition[];
+  readonly policy: {
+    readonly lazyBelowFold: boolean;
+    readonly reserveSpace: boolean;
+    readonly limitPerView: number;
+  };
+}
+
+/** Build the advertisement blueprint (standard news ad positions). */
+export function advertisementBlueprint(): AdvertisementBlueprint {
+  const positions: readonly AdPosition[] = [
+    {
+      id: "header",
+      label: "Header Leaderboard",
+      sizes: ["970x250", "728x90"],
+      viewport: "desktop",
+      lazy: false,
+      sticky: false,
+    },
+    {
+      id: "sidebar",
+      label: "Sidebar MPU",
+      sizes: ["300x250", "300x600"],
+      viewport: "desktop",
+      lazy: true,
+      sticky: false,
+    },
+    {
+      id: "in-article",
+      label: "In-Article",
+      sizes: ["300x250", "728x90"],
+      viewport: "all",
+      lazy: true,
+      sticky: false,
+    },
+    {
+      id: "footer",
+      label: "Footer",
+      sizes: ["728x90", "320x100"],
+      viewport: "all",
+      lazy: true,
+      sticky: false,
+    },
+    {
+      id: "sticky",
+      label: "Sticky Anchor",
+      sizes: ["728x90"],
+      viewport: "desktop",
+      lazy: false,
+      sticky: true,
+    },
+    {
+      id: "mobile",
+      label: "Mobile Banner",
+      sizes: ["320x50", "300x250"],
+      viewport: "mobile",
+      lazy: true,
+      sticky: false,
+    },
+    {
+      id: "video",
+      label: "Video / Outstream",
+      sizes: ["640x360"],
+      viewport: "all",
+      lazy: true,
+      sticky: false,
+    },
+  ];
+  return { positions, policy: { lazyBelowFold: true, reserveSpace: true, limitPerView: 6 } };
+}

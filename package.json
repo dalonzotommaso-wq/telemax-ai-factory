@@ -31,7 +31,8 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build && changeset publish",
-    "prepare": "husky"
+    "prepare": "husky",
+    "telemax": "node packages/generator-wordpress/dist/bin/telemax.js"
   },
   "devDependencies": {
     "@changesets/cli": "2.27.11",
@@ -39,6 +40,7 @@
     "@commitlint/config-conventional": "19.6.0",
     "@eslint/js": "9.17.0",
     "@types/node": "22.10.5",
+    "@vitest/coverage-v8": "2.1.8",
     "eslint": "9.17.0",
     "eslint-config-prettier": "9.1.0",
     "husky": "9.1.7",

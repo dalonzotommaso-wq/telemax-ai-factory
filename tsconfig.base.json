@@ -74,7 +74,19 @@
       "@telemax/config": ["config/dist/index.d.ts"],
       "@telemax/config/*": ["config/dist/*"],
       "@telemax/generator-kit": ["packages/generator-kit/dist/index.d.ts"],
-      "@telemax/generator-kit/*": ["packages/generator-kit/dist/*"]
+      "@telemax/generator-kit/*": ["packages/generator-kit/dist/*"],
+      "@telemax/knowledge": ["packages/knowledge/dist/index.d.ts"],
+      "@telemax/knowledge/*": ["packages/knowledge/dist/*"],
+      "@telemax/prompt-engine": ["packages/prompt-engine/dist/index.d.ts"],
+      "@telemax/prompt-engine/*": ["packages/prompt-engine/dist/*"],
+      "@telemax/ai": ["packages/ai/dist/index.d.ts"],
+      "@telemax/ai/*": ["packages/ai/dist/*"],
+      "@telemax/workflow": ["packages/workflow/dist/index.d.ts"],
+      "@telemax/workflow/*": ["packages/workflow/dist/*"],
+      "@telemax/generator-engine": ["packages/generator-engine/dist/index.d.ts"],
+      "@telemax/generator-engine/*": ["packages/generator-engine/dist/*"],
+      "@telemax/generator-wordpress": ["packages/generator-wordpress/dist/index.d.ts"],
+      "@telemax/generator-wordpress/*": ["packages/generator-wordpress/dist/*"]
     }
   },
   "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage"]

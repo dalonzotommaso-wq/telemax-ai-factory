@@ -21,6 +21,8 @@ export default tseslint.config(
       "**/coverage/**",
       "**/.turbo/**",
       "**/node_modules/**",
+      "**/.next/**",
+      "apps/**",
       "**/*.tsbuildinfo",
     ],
   },

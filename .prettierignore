@@ -5,3 +5,7 @@ coverage/
 node_modules/
 pnpm-lock.yaml
 *.tsbuildinfo
+
+# apps build artifacts
+**/.next/
+apps/**/dist/

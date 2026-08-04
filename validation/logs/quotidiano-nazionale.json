@@ -1,0 +1,11 @@
+{
+  "config": "02-quotidiano-nazionale.json",
+  "siteName": "Il Corriere della Sera Nuovo",
+  "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/quotidiano-nazionale",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "ms": 12,
+  "status": "OK",
+  "fileCount": 67,
+  "manifestPath": ".telemax/manifest.json",
+  "themeDir": "il-corriere-della-sera-nuovo"
+}

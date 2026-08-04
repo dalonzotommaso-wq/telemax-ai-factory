@@ -1,0 +1,11 @@
+{
+  "config": "05-blog-aziendale.json",
+  "siteName": "Gruppo AIR Blog",
+  "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/blog-aziendale",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "ms": 11,
+  "status": "OK",
+  "fileCount": 67,
+  "manifestPath": ".telemax/manifest.json",
+  "themeDir": "gruppo-air-blog"
+}

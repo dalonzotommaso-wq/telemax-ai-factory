@@ -1,0 +1,20 @@
+{
+  "siteName": "Il Corriere della Sera Nuovo",
+  "siteDescription": "Quotidiano nazionale di informazione: economia, esteri, politica e approfondimenti.",
+  "language": "it_IT",
+  "siteUrl": "https://www.quotidianonazionale.example",
+  "author": "Redazione Nazionale",
+  "primaryColor": "#003366",
+  "secondaryColor": "#B8860B",
+  "categories": ["Politica", "Economia", "Esteri", "Cultura", "Opinioni", "Editoriali"],
+  "menu": [
+    { "label": "Home", "path": "/" },
+    { "label": "Politica", "path": "/category/politica" },
+    { "label": "Economia", "path": "/category/economia" },
+    { "label": "Esteri", "path": "/category/esteri" }
+  ],
+  "adSlots": [
+    { "id": "masthead", "label": "Masthead", "location": "leaderboard" },
+    { "id": "sidebar-premium", "label": "Sidebar Premium", "location": "sidebar" }
+  ]
+}

@@ -1,0 +1,57 @@
+[
+  {
+    "config": "01-tgmax.json",
+    "siteName": "TGMAX",
+    "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/tgmax",
+    "generatedAt": "2026-08-01T12:00:00.000Z",
+    "ms": 36,
+    "status": "OK",
+    "fileCount": 67,
+    "manifestPath": ".telemax/manifest.json",
+    "themeDir": "tgmax"
+  },
+  {
+    "config": "02-quotidiano-nazionale.json",
+    "siteName": "Il Corriere della Sera Nuovo",
+    "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/quotidiano-nazionale",
+    "generatedAt": "2026-08-01T12:00:00.000Z",
+    "ms": 12,
+    "status": "OK",
+    "fileCount": 67,
+    "manifestPath": ".telemax/manifest.json",
+    "themeDir": "il-corriere-della-sera-nuovo"
+  },
+  {
+    "config": "03-magazine-lifestyle.json",
+    "siteName": "Vivere Magazine",
+    "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/magazine-lifestyle",
+    "generatedAt": "2026-08-01T12:00:00.000Z",
+    "ms": 11,
+    "status": "OK",
+    "fileCount": 67,
+    "manifestPath": ".telemax/manifest.json",
+    "themeDir": "vivere-magazine"
+  },
+  {
+    "config": "04-portale-sport.json",
+    "siteName": "Sprint Sport",
+    "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/portale-sport",
+    "generatedAt": "2026-08-01T12:00:00.000Z",
+    "ms": 10,
+    "status": "OK",
+    "fileCount": 67,
+    "manifestPath": ".telemax/manifest.json",
+    "themeDir": "sprint-sport"
+  },
+  {
+    "config": "05-blog-aziendale.json",
+    "siteName": "Gruppo AIR Blog",
+    "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/blog-aziendale",
+    "generatedAt": "2026-08-01T12:00:00.000Z",
+    "ms": 11,
+    "status": "OK",
+    "fileCount": 67,
+    "manifestPath": ".telemax/manifest.json",
+    "themeDir": "gruppo-air-blog"
+  }
+]

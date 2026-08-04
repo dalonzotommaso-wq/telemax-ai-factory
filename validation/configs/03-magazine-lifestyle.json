@@ -1,0 +1,20 @@
+{
+  "siteName": "Vivere Magazine",
+  "siteDescription": "Magazine lifestyle: moda, benessere, viaggi, food e tendenze.",
+  "language": "it_IT",
+  "siteUrl": "https://www.viveremagazine.example",
+  "author": "Vivere Editorial Team",
+  "primaryColor": "#E75480",
+  "secondaryColor": "#2E2E2E",
+  "categories": ["Moda", "Benessere", "Viaggi", "Food", "Tendenze"],
+  "menu": [
+    { "label": "Home", "path": "/" },
+    { "label": "Moda", "path": "/category/moda" },
+    { "label": "Viaggi", "path": "/category/viaggi" },
+    { "label": "Food", "path": "/category/food" }
+  ],
+  "adSlots": [
+    { "id": "hero-banner", "label": "Hero Banner", "location": "leaderboard" },
+    { "id": "native-1", "label": "Native In-Article", "location": "in-article" }
+  ]
+}

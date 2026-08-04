@@ -1,0 +1,9 @@
+{
+  // Type-check/editor project for @telemax/knowledge. Emission via tsconfig.build.json.
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "dist"
+  },
+  "include": ["src/**/*.ts"]
+}

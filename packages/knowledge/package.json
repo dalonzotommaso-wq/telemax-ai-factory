@@ -1,0 +1,34 @@
+{
+  "name": "@telemax/knowledge",
+  "version": "0.1.0",
+  "description": "Knowledge Base engine for Telemax AI Factory: documents, metadata, versioning, categories, tags, loaders (markdown/json/yaml; pdf/image prepared), repository, indexing (full-text; embeddings prepared), import/export. Depends only on @telemax/core.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@telemax/core": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

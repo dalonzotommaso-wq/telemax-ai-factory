@@ -9,6 +9,7 @@ import {
   fetchGeneration,
   fetchGenerationLogs,
   generateProject,
+  themeDownloadUrl,
   type Generation,
   type GenerationLog,
 } from "@/lib/api";
@@ -201,7 +202,17 @@ export default function GenerationDetailsPage() {
                 <Button variant="outline" size="sm" onClick={() => void copy("folder", workspaceDir)}>
                   Apri Cartella
                 </Button>
-                <Button size="sm" disabled={regenerating} onClick={() => void regenerate()}>
+                {gen.status === "completed" && (
+                  <a href={themeDownloadUrl(projectId)} download>
+                    <Button size="sm">SCARICA TEMA</Button>
+                  </a>
+                )}
+                <Button
+                  variant="outline"
+                  size="sm"
+                  disabled={regenerating}
+                  onClick={() => void regenerate()}
+                >
                   {regenerating ? "Regenerating…" : "Rigenera"}
                 </Button>
                 {copied && (

@@ -294,3 +294,8 @@ export async function fetchGenerationLogs(id: number, signal?: AbortSignal): Pro
   if (!res.ok) throw new Error(`Logs failed: ${res.status}`);
   return (await res.json()) as GenerationLog[];
 }
+
+/** Direct URL to download the generated theme ZIP for a project. */
+export function themeDownloadUrl(id: number): string {
+  return `${API_URL}/projects/${id}/download/theme`;
+}

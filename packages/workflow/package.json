@@ -1,0 +1,38 @@
+{
+  "name": "@telemax/workflow",
+  "version": "0.1.0",
+  "description": "Workflow Engine for Telemax AI Factory: define reusable, composable workflows that coordinate the AI Orchestrator, Prompt Engine, Knowledge Engine and future Generator Engine. Sequential/parallel/branch/loop, retry, rollback, timeout, events, versioning, validation, import/export. Infrastructure only. Depends on @telemax/core, @telemax/knowledge, @telemax/prompt-engine and @telemax/ai.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --coverage.provider=v8 --coverage.include='src/**/*.ts' --coverage.exclude='src/**/*.test.ts'",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@telemax/core": "workspace:*",
+    "@telemax/knowledge": "workspace:*",
+    "@telemax/prompt-engine": "workspace:*",
+    "@telemax/ai": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

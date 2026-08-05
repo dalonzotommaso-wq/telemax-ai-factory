@@ -1,6 +1,6 @@
 # REPOSITORY STATUS — Telemax AI Factory
 
-_Snapshot generato per TASK-013.0 (messa in sicurezza del repository) — 2026-08-03._
+_Snapshot aggiornato al TASK-017 (release v0.2.0) — 2026-08-04._
 
 ## Sintesi
 
@@ -8,10 +8,10 @@ _Snapshot generato per TASK-013.0 (messa in sicurezza del repository) — 2026-0
 |---|---|
 | Package (workspace di libreria `@telemax/*`) | 9 (+1 root privato `@telemax/ai-factory`) |
 | App eseguibili (`apps/*`) | 3 |
-| Test | 285 casi in 94 file |
-| Endpoint API REST | 8 (+ Swagger UI su `/docs`) |
-| Stato build | Dichiarata verde in sviluppo — non ri-verificabile in questo ambiente (vedi sotto) |
-| Stato git | Storia consolidata in commit logici su `main`, tag `v0.1.0-foundation` |
+| Test | 295 casi |
+| Endpoint API REST | 17 (+ Swagger UI su `/docs`) |
+| Stato build | Verde su Linux: `pnpm lint` 19/19, `pnpm test` 19/19 (295), `pnpm build` 12/12 |
+| Stato git | Storia consolidata in commit logici su `main`, tag `v0.2.0` |
 
 ## Package (9)
 
@@ -27,19 +27,37 @@ Tutti a versione `0.1.0`. Grafo delle dipendenze aciclico (layering lineare dal 
 - `@telemax/dashboard` — Next.js 15 App Router + React 19 (porta 3000).
 - `@telemax/worker` — BullMQ 5 + ioredis 5.
 
-## Endpoint API (8 + docs)
+## Endpoint API (17 + docs)
 
 | Metodo | Path |
 |---|---|
 | GET | `/health` |
 | GET | `/version` |
 | GET | `/stats` |
+| GET | `/system/status` |
+| GET | `/system/packages` |
+| GET | `/system/apps` |
+| GET | `/system/git` |
 | GET | `/projects` |
 | POST | `/projects` |
 | GET | `/projects/:id` |
 | PUT | `/projects/:id` |
 | DELETE | `/projects/:id` |
+| POST | `/projects/:id/archive` |
+| POST | `/projects/:id/duplicate` |
+| POST | `/projects/:id/generate` |
+| GET | `/projects/:id/generation` |
+| GET | `/projects/:id/logs` |
 | GET | `/docs` (Swagger UI / OpenAPI) |
+
+### Project Manager Engine
+
+Ogni progetto ha modello completo (uuid, nome, descrizione, cliente, categoria, tipo,
+stack, generator, workflow, knowledge pack, AI provider, versione, stato, workspace,
+date) ed è persistito su SQLite. Alla creazione viene generata sul disco la cartella
+`workspace/<slug>/{docs,assets,prompts,output,logs,uploads,build}` con `project.json`.
+Generator, knowledge pack e AI provider del wizard sono letti in tempo reale dal
+`RepositoryService` (nessuna lista statica).
 
 ## Test
 
@@ -63,6 +81,8 @@ completa (`pnpm install` con rete) oppure lasciata alla CI.
 - Prima di TASK-013.0: un solo commit (scaffold iniziale), tutto il resto non versionato.
 - Dopo TASK-013.0: l'intero lavoro completato è suddiviso in commit logici (convenzione
   Conventional Commits) su `main`, con tag annotato `v0.1.0-foundation`.
+- Dopo TASK-017: le feature System / Project Manager / Generation sono versionate come
+  release `v0.2.0` (tag annotato).
 - Esclusi dal versionamento (rigenerabili): `node_modules/`, `dist/`, `.next/`,
   `apps/api/data/` (DB SQLite runtime), `output/` e `validation/outputs/` (temi generati).
 

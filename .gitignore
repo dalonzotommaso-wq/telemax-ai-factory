@@ -39,3 +39,6 @@ next-env.d.ts
 # Generated demo & validation theme output (regenerable via the generators)
 /output/
 /validation/outputs/
+
+# Generated project workspaces (created at runtime by the API)
+/workspace/

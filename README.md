@@ -74,6 +74,43 @@ pnpm test          # run unit tests (Vitest)
 pnpm format        # apply Prettier formatting
 ```
 
+## Applications
+
+| App                 | Path              | Responsibility                                            |
+| ------------------- | ----------------- | --------------------------------------------------------- |
+| `@telemax/api`      | `apps/api/`       | Fastify REST API — projects and live system status.       |
+| `@telemax/dashboard`| `apps/dashboard/` | Next.js control plane — Projects, wizard and System page. |
+| `@telemax/worker`   | `apps/worker/`    | BullMQ background worker.                                  |
+
+## Project Manager Engine
+
+Creating a project persists it to SQLite **and materialises a real workspace on
+disk**:
+
+```
+workspace/<slug>/
+  docs/  assets/  prompts/  output/  logs/  uploads/  build/
+  project.json   # full project configuration
+```
+
+The "New project" wizard reads the installed generators, knowledge packs and AI
+providers live from the repository scan (`GET /system/status`) — nothing is
+hard-coded.
+
+### API endpoints
+
+```
+GET    /health | /version | /stats           # system probes and live stats
+GET    /system/status | /packages | /apps | /git   # repository scan
+GET    /projects            POST   /projects
+GET    /projects/:id        PUT    /projects/:id     DELETE /projects/:id
+POST   /projects/:id/archive        POST   /projects/:id/duplicate
+GET    /docs                                    # Swagger UI (OpenAPI)
+```
+
+Run the full stack with `pnpm dev`, then open `http://localhost:3000`
+(dashboard) and `http://localhost:3001/docs` (API).
+
 ## Documentation
 
 - Architecture specification: [`docs/SPEC-001-Foundation.md`](docs/SPEC-001-Foundation.md)

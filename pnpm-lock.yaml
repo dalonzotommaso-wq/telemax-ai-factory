@@ -65,6 +65,18 @@ importers:
       '@fastify/swagger-ui':
         specifier: 5.2.1
         version: 5.2.1
+      '@telemax/core':
+        specifier: workspace:*
+        version: link:../../core
+      '@telemax/generator-engine':
+        specifier: workspace:*
+        version: link:../../packages/generator-engine
+      '@telemax/generator-wordpress':
+        specifier: workspace:*
+        version: link:../../packages/generator-wordpress
+      '@telemax/workflow':
+        specifier: workspace:*
+        version: link:../../packages/workflow
       better-sqlite3:
         specifier: 11.8.1
         version: 11.8.1

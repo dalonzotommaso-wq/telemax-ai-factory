@@ -14,11 +14,15 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "@telemax/core": "workspace:*",
+    "@telemax/generator-engine": "workspace:*",
+    "@telemax/generator-wordpress": "workspace:*",
+    "@telemax/workflow": "workspace:*",
     "@fastify/cors": "10.0.2",
     "@fastify/swagger": "9.4.2",
     "@fastify/swagger-ui": "5.2.1",
-    "fastify": "5.2.1",
-    "better-sqlite3": "11.8.1"
+    "better-sqlite3": "11.8.1",
+    "fastify": "5.2.1"
   },
   "devDependencies": {
     "@types/node": "22.10.5",

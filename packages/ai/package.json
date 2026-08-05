@@ -1,0 +1,37 @@
+{
+  "name": "@telemax/ai",
+  "version": "0.1.0",
+  "description": "Provider-agnostic AI Orchestrator for Telemax AI Factory: coordinates Knowledge and Prompt engines, provider/model registries, request/response, conversations, pipelines, resilience, cost and telemetry. Infrastructure only — no HTTP, no API keys, no external calls. Depends only on @telemax/core, @telemax/knowledge and @telemax/prompt-engine.",
+  "license": "MIT",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --coverage.provider=v8 --coverage.include='src/**/*.ts' --coverage.exclude='src/**/*.test.ts'",
+    "clean": "rm -rf dist .turbo *.tsbuildinfo"
+  },
+  "dependencies": {
+    "@telemax/core": "workspace:*",
+    "@telemax/knowledge": "workspace:*",
+    "@telemax/prompt-engine": "workspace:*"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

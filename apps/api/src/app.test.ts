@@ -1,11 +1,20 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
+import { mkdtempSync, existsSync, readFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { buildApp } from "./app.js";
 import { openDatabase } from "./db.js";
+import { WorkspaceService } from "./services/workspace-service.js";
 
-async function makeApp(): Promise<FastifyInstance> {
+function makeWorkspace(): { service: WorkspaceService; root: string } {
+  const root = mkdtempSync(join(tmpdir(), "telemax-ws-"));
+  return { service: new WorkspaceService(root), root };
+}
+
+async function makeApp(workspace?: WorkspaceService): Promise<FastifyInstance> {
   const db = openDatabase(":memory:");
-  return buildApp(undefined, { db });
+  return buildApp(undefined, { db, workspace: workspace ?? makeWorkspace().service });
 }
 
 describe("system routes", () => {
@@ -136,5 +145,61 @@ describe("projects CRUD", () => {
       payload: { name: "Y", type: "cobol" },
     });
     expect(badType.statusCode).toBe(400);
+  });
+});
+
+describe("workspace, archive and duplicate", () => {
+  it("creates a real workspace with project.json on POST", async () => {
+    const { service, root } = makeWorkspace();
+    const app = await makeApp(service);
+    const res = await app.inject({
+      method: "POST",
+      url: "/projects",
+      payload: { name: "TGMAX News", type: "wordpress-news", client: "Gruppo AIR" },
+    });
+    expect(res.statusCode).toBe(201);
+    const project = res.json();
+    expect(project.slug).toBe("tgmax-news");
+    expect(project.workspace).toBe("workspace/tgmax-news");
+    const base = join(root, "tgmax-news");
+    for (const folder of ["docs", "assets", "prompts", "output", "logs", "uploads", "build"]) {
+      expect(existsSync(join(base, folder))).toBe(true);
+    }
+    const manifest = JSON.parse(readFileSync(join(base, "project.json"), "utf8"));
+    expect(manifest.uuid).toBe(project.uuid);
+    expect(manifest.client).toBe("Gruppo AIR");
+    await app.close();
+  });
+
+  it("archives a project via POST /projects/:id/archive", async () => {
+    const app = await makeApp();
+    const created = await app.inject({
+      method: "POST",
+      url: "/projects",
+      payload: { name: "Archive me", type: "react" },
+    });
+    const id = created.json().id;
+    const res = await app.inject({ method: "POST", url: `/projects/${id}/archive` });
+    expect(res.statusCode).toBe(200);
+    expect(res.json().status).toBe("archived");
+    await app.close();
+  });
+
+  it("duplicates a project via POST /projects/:id/duplicate", async () => {
+    const app = await makeApp();
+    const created = await app.inject({
+      method: "POST",
+      url: "/projects",
+      payload: { name: "Original", type: "laravel", generator: "@telemax/generator-wordpress" },
+    });
+    const id = created.json().id;
+    const res = await app.inject({ method: "POST", url: `/projects/${id}/duplicate` });
+    expect(res.statusCode).toBe(201);
+    const copy = res.json();
+    expect(copy.name).toBe("Original (copy)");
+    expect(copy.status).toBe("draft");
+    expect(copy.generator).toBe("@telemax/generator-wordpress");
+    expect(copy.id).not.toBe(id);
+    await app.close();
   });
 });

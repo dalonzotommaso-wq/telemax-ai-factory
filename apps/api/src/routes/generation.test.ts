@@ -63,4 +63,30 @@ describe("generation", () => {
     expect(res.statusCode).toBe(404);
     await app.close();
   });
+
+  it("serves the generated theme as a ZIP after generation", async () => {
+    const app = await makeApp();
+    const id = await createProject(app, {
+      name: "TGMAX",
+      type: "wordpress-news",
+      generator: "@telemax/generator-wordpress",
+    });
+
+    // Before generation the archive does not exist.
+    const before = await app.inject({ method: "GET", url: `/projects/${id}/download/theme` });
+    expect(before.statusCode).toBe(404);
+
+    await app.inject({ method: "POST", url: `/projects/${id}/generate` });
+
+    const res = await app.inject({ method: "GET", url: `/projects/${id}/download/theme` });
+    expect(res.statusCode).toBe(200);
+    expect(res.headers["content-type"]).toContain("application/zip");
+    expect(res.headers["content-disposition"]).toContain(".zip");
+    // A valid ZIP starts with the "PK" local-file-header signature.
+    const buf = res.rawPayload;
+    expect(buf.length).toBeGreaterThan(0);
+    expect(buf[0]).toBe(0x50);
+    expect(buf[1]).toBe(0x4b);
+    await app.close();
+  });
 });

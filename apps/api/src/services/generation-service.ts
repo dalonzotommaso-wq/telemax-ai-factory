@@ -8,9 +8,10 @@
 // @telemax/* packages. Every phase, every produced file and the final status
 // are recorded in the database.
 // -----------------------------------------------------------------------------
-import { existsSync, readFileSync, readdirSync, statSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
+import { deflateRawSync } from "node:zlib";
 import { isErr } from "@telemax/core";
 import { GeneratorEngine } from "@telemax/generator-engine";
 import { WorkflowEngine } from "@telemax/workflow";
@@ -57,6 +58,82 @@ function walkFiles(dir: string): string[] {
     else out.push(full);
   }
   return out;
+}
+
+// --- Minimal ZIP writer (deflate) using only node:zlib — no external package. ---
+const CRC_TABLE = ((): Uint32Array => {
+  const t = new Uint32Array(256);
+  for (let n = 0; n < 256; n += 1) {
+    let c = n;
+    for (let k = 0; k < 8; k += 1) c = (c & 1) === 1 ? 0xedb88320 ^ (c >>> 1) : c >>> 1;
+    t[n] = c >>> 0;
+  }
+  return t;
+})();
+
+function crc32(buf: Buffer): number {
+  let c = 0xffffffff;
+  for (let i = 0; i < buf.length; i += 1) c = (CRC_TABLE[(c ^ buf[i]) & 0xff] ?? 0) ^ (c >>> 8);
+  return (c ^ 0xffffffff) >>> 0;
+}
+
+interface ZipEntry {
+  name: string;
+  data: Buffer;
+}
+
+/** Build a ZIP archive (deflate, storing when smaller) from in-memory entries. */
+function buildZip(entries: readonly ZipEntry[]): Buffer {
+  const locals: Buffer[] = [];
+  const centrals: Buffer[] = [];
+  let offset = 0;
+  for (const entry of entries) {
+    const nameBuf = Buffer.from(entry.name, "utf8");
+    const crc = crc32(entry.data);
+    const deflated = deflateRawSync(entry.data);
+    const useDeflate = deflated.length < entry.data.length;
+    const method = useDeflate ? 8 : 0;
+    const body = useDeflate ? deflated : entry.data;
+
+    const local = Buffer.alloc(30);
+    local.writeUInt32LE(0x04034b50, 0);
+    local.writeUInt16LE(20, 4);
+    local.writeUInt16LE(0, 6);
+    local.writeUInt16LE(method, 8);
+    local.writeUInt16LE(0, 10);
+    local.writeUInt16LE(0, 12);
+    local.writeUInt32LE(crc, 14);
+    local.writeUInt32LE(body.length, 18);
+    local.writeUInt32LE(entry.data.length, 22);
+    local.writeUInt16LE(nameBuf.length, 26);
+    local.writeUInt16LE(0, 28);
+    locals.push(local, nameBuf, body);
+
+    const central = Buffer.alloc(46);
+    central.writeUInt32LE(0x02014b50, 0);
+    central.writeUInt16LE(20, 4);
+    central.writeUInt16LE(20, 6);
+    central.writeUInt16LE(0, 8);
+    central.writeUInt16LE(method, 10);
+    central.writeUInt16LE(0, 12);
+    central.writeUInt16LE(0, 14);
+    central.writeUInt32LE(crc, 16);
+    central.writeUInt32LE(body.length, 20);
+    central.writeUInt32LE(entry.data.length, 24);
+    central.writeUInt16LE(nameBuf.length, 28);
+    central.writeUInt32LE(offset, 42);
+    centrals.push(central, nameBuf);
+
+    offset += local.length + nameBuf.length + body.length;
+  }
+  const centralBuf = Buffer.concat(centrals);
+  const end = Buffer.alloc(22);
+  end.writeUInt32LE(0x06054b50, 0);
+  end.writeUInt16LE(entries.length, 8);
+  end.writeUInt16LE(entries.length, 10);
+  end.writeUInt32LE(centralBuf.length, 12);
+  end.writeUInt32LE(offset, 16);
+  return Buffer.concat([...locals, centralBuf, end]);
 }
 
 export class GenerationService {
@@ -150,6 +227,19 @@ export class GenerationService {
           sha256: createHash("sha256").update(content).digest("hex"),
         });
       }
+
+      // ---- Export: package the generated theme into export/theme.zip ----
+      log("writing", "Packaging theme into export/theme.zip");
+      const exportDir = join(this.workspace.pathFor(project), "export");
+      mkdirSync(exportDir, { recursive: true });
+      const zipEntries = walkFiles(outputDir).map((abs) => ({
+        name: abs.slice(outputDir.length + 1),
+        data: readFileSync(abs),
+      }));
+      const zipData = buildZip(zipEntries);
+      const zipPath = join(exportDir, "theme.zip");
+      writeFileSync(zipPath, zipData);
+      log("writing", `Theme packaged (${String(zipData.byteLength)} bytes) at export/theme.zip`);
 
       log("completed", `Generation completed — ${String(written.value.fileCount)} files`);
       return finishGeneration(this.db, id, {

@@ -11,6 +11,7 @@ import {
   Settings,
   ScrollText,
   Bot,
+  Server,
   type LucideIcon,
 } from "lucide-react";
 
@@ -22,6 +23,7 @@ export interface NavItem {
 
 export const NAV_ITEMS: readonly NavItem[] = [
   { label: "Dashboard", href: "/", icon: LayoutDashboard },
+  { label: "System", href: "/system", icon: Server },
   { label: "Projects", href: "/projects", icon: FolderKanban },
   { label: "Generators", href: "/generators", icon: Wand2 },
   { label: "Knowledge", href: "/knowledge", icon: BookOpen },

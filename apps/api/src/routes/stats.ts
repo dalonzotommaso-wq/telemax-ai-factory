@@ -1,25 +1,28 @@
 import type { FastifyInstance } from "fastify";
 import { countProjects } from "../repositories/project-repository.js";
 
-// Platform facts surfaced alongside the live project count.
-const ENGINE_PACKAGES = 9;
-const GENERATORS = 1;
-const MONOREPO_TESTS = 267;
-
+/**
+ * Dashboard statistics. Every value is real:
+ *  - projects   → live from the SQLite database
+ *  - packages / generators / tests → live from the repository scan (RepositoryService)
+ */
 export async function statsRoutes(app: FastifyInstance): Promise<void> {
   app.get(
     "/stats",
     {
       schema: {
-        description: "Dashboard statistics. Project count is read live from the database.",
+        description: "Dashboard statistics, read live from the database and the repository scan.",
         tags: ["system"],
       },
     },
-    async () => ({
-      projects: countProjects(app.db),
-      generators: GENERATORS,
-      packages: ENGINE_PACKAGES,
-      tests: MONOREPO_TESTS,
-    }),
+    async () => {
+      const status = app.repository.getStatus();
+      return {
+        projects: countProjects(app.db),
+        generators: status.counts.generators,
+        packages: status.counts.packages,
+        tests: status.counts.tests,
+      };
+    },
   );
 }

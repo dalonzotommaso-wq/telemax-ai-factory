@@ -33,6 +33,10 @@ framework is wired into the platform apps.
   generator → writing → completed) with per-file records (name, path, size, sha256,
   timestamp). Endpoints `POST /projects/:id/generate`, `GET /projects/:id/generation`,
   `GET /projects/:id/logs`; a Generation Details page with a live timeline.
+- **Downloadable theme.** At the end of a generation the theme is packaged into
+  `workspace/<slug>/export/theme.zip` (built with Node's `zlib` only). New endpoint
+  `GET /projects/:id/download/theme` streams the archive; the Generation Details page shows a
+  **SCARICA TEMA** button once generation is complete.
 
 ### Changed
 

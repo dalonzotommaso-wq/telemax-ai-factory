@@ -8,9 +8,9 @@ _Snapshot aggiornato al TASK-017 (release v0.2.0) — 2026-08-04._
 |---|---|
 | Package (workspace di libreria `@telemax/*`) | 9 (+1 root privato `@telemax/ai-factory`) |
 | App eseguibili (`apps/*`) | 3 |
-| Test | 295 casi |
-| Endpoint API REST | 17 (+ Swagger UI su `/docs`) |
-| Stato build | Verde su Linux: `pnpm lint` 19/19, `pnpm test` 19/19 (295), `pnpm build` 12/12 |
+| Test | 296 casi |
+| Endpoint API REST | 18 (+ Swagger UI su `/docs`) |
+| Stato build | Verde su Linux: `pnpm lint` 19/19, `pnpm test` 19/19 (296), `pnpm build` 12/12 |
 | Stato git | Storia consolidata in commit logici su `main`, tag `v0.2.0` |
 
 ## Package (9)
@@ -27,7 +27,7 @@ Tutti a versione `0.1.0`. Grafo delle dipendenze aciclico (layering lineare dal 
 - `@telemax/dashboard` — Next.js 15 App Router + React 19 (porta 3000).
 - `@telemax/worker` — BullMQ 5 + ioredis 5.
 
-## Endpoint API (17 + docs)
+## Endpoint API (18 + docs)
 
 | Metodo | Path |
 |---|---|
@@ -48,6 +48,7 @@ Tutti a versione `0.1.0`. Grafo delle dipendenze aciclico (layering lineare dal 
 | POST | `/projects/:id/generate` |
 | GET | `/projects/:id/generation` |
 | GET | `/projects/:id/logs` |
+| GET | `/projects/:id/download/theme` |
 | GET | `/docs` (Swagger UI / OpenAPI) |
 
 ### Project Manager Engine

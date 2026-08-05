@@ -6,12 +6,20 @@ function project(over: Partial<Project>): Project {
   return {
     id: 1,
     uuid: "u",
+    slug: "sample",
     name: "Sample",
     description: "",
+    client: "",
+    category: "",
     type: "react",
-    status: "draft",
     stack: "",
+    generator: "",
+    workflow: "",
+    knowledgePack: "",
+    aiProvider: "",
     version: "0.1.0",
+    status: "draft",
+    workspace: "workspace/sample",
     createdAt: "2026-01-01T00:00:00.000Z",
     updatedAt: "2026-01-01T00:00:00.000Z",
     ...over,
@@ -61,12 +69,24 @@ describe("wizard logic", () => {
 
   it("builds a create input from wizard state", () => {
     const input = wizardToInput({
-      step: 4,
+      step: 6,
       name: "  TGMAX  ",
-      type: "wordpress-news",
+      client: " Gruppo AIR ",
       description: " hi ",
+      type: "wordpress-news",
+      generator: "@telemax/generator-wordpress",
+      knowledgePack: "@telemax/knowledge",
+      aiProvider: "stub",
     });
-    expect(input).toEqual({ name: "TGMAX", type: "wordpress-news", description: "hi" });
+    expect(input).toEqual({
+      name: "TGMAX",
+      type: "wordpress-news",
+      description: "hi",
+      client: "Gruppo AIR",
+      generator: "@telemax/generator-wordpress",
+      knowledgePack: "@telemax/knowledge",
+      aiProvider: "stub",
+    });
   });
 
   it("throws if type is missing", () => {

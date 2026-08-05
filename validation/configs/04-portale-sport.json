@@ -1,0 +1,21 @@
+{
+  "siteName": "Sprint Sport",
+  "siteDescription": "Portale sportivo: calcio, motori, basket, risultati live e calciomercato.",
+  "language": "it_IT",
+  "siteUrl": "https://www.sprintsport.example",
+  "author": "Sprint Sport Desk",
+  "primaryColor": "#00A651",
+  "secondaryColor": "#111111",
+  "categories": ["Calcio", "Motori", "Basket", "Tennis", "Calciomercato", "Live"],
+  "menu": [
+    { "label": "Home", "path": "/" },
+    { "label": "Calcio", "path": "/category/calcio" },
+    { "label": "Live", "path": "/live" },
+    { "label": "Calciomercato", "path": "/category/calciomercato" }
+  ],
+  "adSlots": [
+    { "id": "top-leaderboard", "label": "Top Leaderboard", "location": "leaderboard" },
+    { "id": "live-sidebar", "label": "Live Sidebar", "location": "sidebar" },
+    { "id": "match-in-article", "label": "Match In-Article", "location": "in-article" }
+  ]
+}

@@ -1,0 +1,470 @@
+{
+  "generator": "wordpress-news",
+  "generatorVersion": "0.1.0",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "fileCount": 66,
+  "artifacts": [
+    {
+      "path": "tgmax/.telemax/build-info.json",
+      "contentType": "text/plain",
+      "bytes": 103,
+      "sha256": "2a4f5e840bd4803ba3093d0d21ad8d85e2bc258e49876a26a92f870b39ca94a5",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/404.php",
+      "contentType": "application/x-php",
+      "bytes": 653,
+      "sha256": "6e40b2e199aea583a563551b2ff2229f6cc891bbbda601380c01c09954a2b3c6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/archive.php",
+      "contentType": "application/x-php",
+      "bytes": 682,
+      "sha256": "cda16eb0104b4b06801a219f72684d6842e663876cca5f3b7760c9b5216b9e97",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/css/main.css",
+      "contentType": "text/css",
+      "bytes": 732,
+      "sha256": "35a9b8b3cf3a2333c23b0fbf16cd37c3c5f9f45ecaa15739898faba2177b89dd",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/css/tokens.css",
+      "contentType": "text/plain",
+      "bytes": 831,
+      "sha256": "1114a9f73d910ed5f144926ddff9ec06752809c6f76b50471997eb4b12824fb2",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/images/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/images/icons/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/images/logos/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/images/placeholders/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/assets/js/main.js",
+      "contentType": "text/javascript",
+      "bytes": 381,
+      "sha256": "36cc6ac95a5561e6f59fe8cfb0b139b086eacc4f4650e2b71abe707b5bfc5368",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/author.php",
+      "contentType": "application/x-php",
+      "bytes": 870,
+      "sha256": "4705ada2cf9c1fca182621e8f8ffa1e82dc6c3e95fe563f0b6f9830b012e4716",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/category.php",
+      "contentType": "application/x-php",
+      "bytes": 693,
+      "sha256": "caa56d135a68fc3fd2f3e8c525220b0b9397d8ab6b2e27092fde013645a17b6b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/accessibility.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1246,
+      "sha256": "ca691ca4eec81b92ca5638a76357ea3a8be3bec5626e6a85f07a6b4c06f5bf4b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/ads.config.json",
+      "contentType": "application/json",
+      "bytes": 365,
+      "sha256": "10f02df22edc088dff02b2ee0adf7f65f276e66b0fe9223ebc3cb410d8b4fad9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/advertising.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1470,
+      "sha256": "f706058c5b0f915ddd2906add2dadcec56a4b87e863f3452ab02ea78b93178e9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/components.json",
+      "contentType": "text/plain",
+      "bytes": 2597,
+      "sha256": "654929ef67b155eba0a4f607dbbdcc027e780a35ab4be73b8bca465069dfac12",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/design-tokens.json",
+      "contentType": "text/plain",
+      "bytes": 1647,
+      "sha256": "394867beef22cce406ebc0913a56b3e50d44e7f7cca3699216b8df516b423bbf",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/layout.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 6515,
+      "sha256": "488b3c2b4346e2be401186d0ad4d4e005558ab02f0cc3ec6245dd58ac3164d20",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/performance.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 692,
+      "sha256": "9661ba5d0b3be226def74da005089426f8d7c35774c416cea0d2027816a2b476",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/project.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 27284,
+      "sha256": "540a4c6a407d3ce7ca5ab1fe19b0a9a65e48df56409eff830a1814e01afbd96f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/seo.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 2617,
+      "sha256": "01151a3e62ee84d1ed6fecfb229b537b0186adc7b9d6aa50c5c0ee242d4467f9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/sitemap.config.json",
+      "contentType": "application/json",
+      "bytes": 212,
+      "sha256": "3a1796e453af2b05d071ea19adc3a918d728b355ae9bc1e746289627f3a704aa",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/config/web-vitals.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 750,
+      "sha256": "65db5711d0ca896d613eafbc94710ef0f2458b585218edbf72b6b89c43776802",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/docs/BLUEPRINT.md",
+      "contentType": "text/plain",
+      "bytes": 587,
+      "sha256": "fc3a6abeeaa5d751ccc9c1207ae493ca0335b44f07a65dcb45a3c2a93c7f0b82",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/docs/NAMING-CONVENTIONS.md",
+      "contentType": "text/plain",
+      "bytes": 847,
+      "sha256": "6f68c2b70e2ccadd6a1b34fd598ad49fdf409b5a8c839a6915f5f468babd136e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/docs/PROJECT.md",
+      "contentType": "text/markdown",
+      "bytes": 1157,
+      "sha256": "728431c1f49232edab474951c64bf9d8b075ea1cf3979c3367abcd20045a95d6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/footer.php",
+      "contentType": "application/x-php",
+      "bytes": 646,
+      "sha256": "25f945eb08e2785604b155cc537a63ff497cbe56d96b9b4ee38a6348f8d49b0e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/front-page.php",
+      "contentType": "application/x-php",
+      "bytes": 578,
+      "sha256": "2118f893527a9beb072a962749f2f317727961b4aec25960d468c98c084efbf8",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/functions.php",
+      "contentType": "application/x-php",
+      "bytes": 1236,
+      "sha256": "5dca2dd4fb2dbb41e505a6409c435dc7477cdf33507c0b54f7b1723660c78b08",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/header.php",
+      "contentType": "application/x-php",
+      "bytes": 849,
+      "sha256": "932faa439c0ca399133734addb57f4257de1154314f30fc2c64fcc63c31925a1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/home.php",
+      "contentType": "application/x-php",
+      "bytes": 969,
+      "sha256": "794a2ed05a9f939e0fbf3fd08c08e3fbf23c4e5f02855d1ae12064c46cd29390",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/inc/schema.php",
+      "contentType": "application/x-php",
+      "bytes": 540,
+      "sha256": "e2a6c0561703fd3e36e1f5e9d410a341568335ff401d34fb99763e90d8af8247",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/inc/seo.php",
+      "contentType": "application/x-php",
+      "bytes": 660,
+      "sha256": "8a83bafe42a1b80378a41917f33b985b128edddfb99df92c5ffcfeaafb42b538",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/inc/sitemap.php",
+      "contentType": "application/x-php",
+      "bytes": 371,
+      "sha256": "71baeeb9b6202b8e48de784e6741568092f1141e3395b7da7710b2c23683497a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/inc/widgets.php",
+      "contentType": "application/x-php",
+      "bytes": 547,
+      "sha256": "bd37fe450ea3bbab20f7106d4d0fb07748754f1b802979dfde730014600bde72",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/index.php",
+      "contentType": "application/x-php",
+      "bytes": 571,
+      "sha256": "06989cbaa0320ea6090da18e7ac5e1d2bd0fd2cd6274e971475534d5b6ba8829",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/manifest.webmanifest",
+      "contentType": "application/manifest+json",
+      "bytes": 477,
+      "sha256": "2f9b4555016477a9cd4cccd98423f645d4814b038528aa81eeec017f29caf925",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/page.php",
+      "contentType": "application/x-php",
+      "bytes": 545,
+      "sha256": "7cbd5197f39d7bcd2ce284ae2486d01af09bf1ab87055d38d0eb5e0998b2b3fe",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/README.md",
+      "contentType": "text/markdown",
+      "bytes": 555,
+      "sha256": "80ff6b77ce914f69eedb812cfa978bb58fd571c23e9e7354852fd0c070270fae",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/robots.txt",
+      "contentType": "text/plain",
+      "bytes": 109,
+      "sha256": "4e92d456177191bbe77226be8f35df7285e35d42ab9e3d50c57f1a01018d273b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/screenshot.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 775,
+      "sha256": "2e0e07bd60f1156a31ef9e523f294049a058bc9daba7b9fc7ad2dc4ce891e64f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/search.php",
+      "contentType": "application/x-php",
+      "bytes": 956,
+      "sha256": "1f5e6ae1cb29388e2806ed0a6515a562a7584688c522ea4ddcb3af3bc67090da",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 354,
+      "sha256": "4c8a8fdf0bd683e8deab1ebd5a5c9cbcd44cfd682a363913a6732ba28803e74c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/single.php",
+      "contentType": "application/x-php",
+      "bytes": 725,
+      "sha256": "7c4d71b29d3f4f53cd18f35206223d1c1dd66f773c52ef5899f56c6aefe8cb66",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/STRUCTURE.md",
+      "contentType": "text/markdown",
+      "bytes": 1702,
+      "sha256": "5795af564cf0571676fa8e8d6e54c96f2c3193d61952a632dabcfc3315c1d77f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/style.css",
+      "contentType": "text/css",
+      "bytes": 812,
+      "sha256": "2409025e5d0800907103e4a48948fb0597e66d3eaa176654e2389960b249c074",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/ads/ad-in-article.php",
+      "contentType": "application/x-php",
+      "bytes": 351,
+      "sha256": "c98a8e15c2798a88c6335a2c87ffd210fe599cda12e9554091f3affa2f52d96c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/ads/ad-leaderboard.php",
+      "contentType": "application/x-php",
+      "bytes": 355,
+      "sha256": "8a3749fa103afd1a58d7452c92bc81b9b3acacadf37140ec09d0381f498e6839",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/ads/ad-sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 339,
+      "sha256": "efeafe71546358a984258fb8fbc063745b68f0d32d900763a9bda85fda94cc9f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/author-box.php",
+      "contentType": "application/x-php",
+      "bytes": 598,
+      "sha256": "54159fc089402dd743d848e79528683996bae762f441d334610e7aef00ac0d2d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/banner-adv.php",
+      "contentType": "application/x-php",
+      "bytes": 459,
+      "sha256": "a012fdaf390ab681c23e5462cd5afb78a14157469668acac0ef455aaa06b843d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/breadcrumb.php",
+      "contentType": "application/x-php",
+      "bytes": 476,
+      "sha256": "750d0753251299fa23a432647906aaedfb0871d41228f211172502222570c6cb",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/breaking-news.php",
+      "contentType": "application/x-php",
+      "bytes": 440,
+      "sha256": "86cef77336fd26eceaa208eb3a6aada933016eb8cc29e75ff3704a9753b4d864",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/card-news.php",
+      "contentType": "application/x-php",
+      "bytes": 607,
+      "sha256": "6a0bfbbb3bd015634c2f1fcf81f09d0bf653c068b5cbf16bbd7f01347f96ffff",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/comments.php",
+      "contentType": "application/x-php",
+      "bytes": 416,
+      "sha256": "6f83e6ebec7834626b4f8786946d589eb0d149fee6fef6a38c294d65a9a20e86",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/gallery.php",
+      "contentType": "application/x-php",
+      "bytes": 586,
+      "sha256": "ef9cfab9aab0ac450969c6a86d34feea4a7eba90a8f2712e13f4c78c7e8890cc",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/hero.php",
+      "contentType": "application/x-php",
+      "bytes": 564,
+      "sha256": "4001edcd030945331699abf26fe5edabb62c94b5a2943857de7b9055ce988660",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/live-banner.php",
+      "contentType": "application/x-php",
+      "bytes": 431,
+      "sha256": "40e698393f2520477d02cf2a1bc4b5ee01be5277adde7a7e6076978e28aad9fd",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/newsletter.php",
+      "contentType": "application/x-php",
+      "bytes": 441,
+      "sha256": "162a3dd33b82be060f410a8f5d796072302efe2c011ed9cb7085d1a101c98288",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/related-articles.php",
+      "contentType": "application/x-php",
+      "bytes": 597,
+      "sha256": "ab04ba291e1a99381603a0a970e74417d1e977d5a583ecbf0201037d82d9b28e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/social-share.php",
+      "contentType": "application/x-php",
+      "bytes": 435,
+      "sha256": "325451fb9c4c884ce67bb922db28480013d17c56ae8c1aa647acfa0b12bbd093",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/components/video-block.php",
+      "contentType": "application/x-php",
+      "bytes": 616,
+      "sha256": "0559cdd7995059b1554ee8908a052f75bc9f81d816f3ede1acbc167d961323b7",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/navigation.php",
+      "contentType": "application/x-php",
+      "bytes": 584,
+      "sha256": "3f2af3b8e6e68c6c03f311e0cbe0bb600d1618c173584fca91568feb2d969f36",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/schema/newsarticle.php",
+      "contentType": "application/x-php",
+      "bytes": 649,
+      "sha256": "2323a5b445ded11690fead2dd0ee383205a8f2c74f4f9899fe9fc4b02e196449",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/template-parts/seo/meta-tags.php",
+      "contentType": "application/x-php",
+      "bytes": 600,
+      "sha256": "6f44e0e0f38155a3ea2c8aa219d1f6e704a32e11ef72e377a355d2e08907237d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "tgmax/theme.json",
+      "contentType": "application/json",
+      "bytes": 443,
+      "sha256": "ffa7e6e66fa215b28748d78c3b3bbe24d74dc113b474c8161d6b4f00cc41835e",
+      "version": "0.1.0"
+    }
+  ]
+}

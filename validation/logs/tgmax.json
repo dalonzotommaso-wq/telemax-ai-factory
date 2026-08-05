@@ -1,0 +1,11 @@
+{
+  "config": "01-tgmax.json",
+  "siteName": "TGMAX",
+  "outputDir": "/home/claude/telemax-ai-factory/validation/outputs/tgmax",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "ms": 36,
+  "status": "OK",
+  "fileCount": 67,
+  "manifestPath": ".telemax/manifest.json",
+  "themeDir": "tgmax"
+}

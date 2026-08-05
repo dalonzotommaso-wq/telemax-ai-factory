@@ -1,0 +1,470 @@
+{
+  "generator": "wordpress-news",
+  "generatorVersion": "0.1.0",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "fileCount": 66,
+  "artifacts": [
+    {
+      "path": "sprint-sport/.telemax/build-info.json",
+      "contentType": "text/plain",
+      "bytes": 110,
+      "sha256": "d6b97d2ca5b0dd51cef6b9820a8d64e66f3c9852098c76bd1fd444d36603fa5a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/404.php",
+      "contentType": "application/x-php",
+      "bytes": 660,
+      "sha256": "088f9147f91e43cd65fea70f27b2818b0fb17db914a2964abb1c4dfc007b25da",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/archive.php",
+      "contentType": "application/x-php",
+      "bytes": 689,
+      "sha256": "cee89f02b50de7dfa29c95c516d3ee82c034964ecede3e69cbbab344f4031a98",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/css/main.css",
+      "contentType": "text/css",
+      "bytes": 739,
+      "sha256": "b29baf27c5273dacdc7497ed32bdd917eaa7570218782a1a342e5e32c4f03053",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/css/tokens.css",
+      "contentType": "text/plain",
+      "bytes": 831,
+      "sha256": "0a41f13f9cbcf5116739d97083c21a4ca6ebbdf4ec8518957d69a6f0ac1ec824",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/images/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/images/icons/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/images/logos/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/images/placeholders/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/assets/js/main.js",
+      "contentType": "text/javascript",
+      "bytes": 388,
+      "sha256": "924949d9d3130826ca28e192ce844652de8d384a1230e5a77bbb6f735fea451a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/author.php",
+      "contentType": "application/x-php",
+      "bytes": 877,
+      "sha256": "1ccecf7120dafe0e4db0cc75a0c0b087eccc5208180efa4ab34a86742ed16c6c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/category.php",
+      "contentType": "application/x-php",
+      "bytes": 700,
+      "sha256": "b410d54739198588a42c5a99bd553d9e3dc31d3abe87553aa43410c4d43260c6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/accessibility.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1248,
+      "sha256": "1ef1525c3131465d2be3d7da06e0100a343ebdba03e7645a41ba876e75363bf1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/ads.config.json",
+      "contentType": "application/json",
+      "bytes": 379,
+      "sha256": "fb3624fd80f0f39536b3a6bd8d8a02a99b410289f3e048b6c8eae0b6259e8fba",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/advertising.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1470,
+      "sha256": "f706058c5b0f915ddd2906add2dadcec56a4b87e863f3452ab02ea78b93178e9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/components.json",
+      "contentType": "text/plain",
+      "bytes": 2597,
+      "sha256": "654929ef67b155eba0a4f607dbbdcc027e780a35ab4be73b8bca465069dfac12",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/design-tokens.json",
+      "contentType": "text/plain",
+      "bytes": 1647,
+      "sha256": "bd8d6bc6c200d956da95985f69f24b14f8261b68822ffba960fb57d052aae874",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/layout.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 6585,
+      "sha256": "72f7fa8a08a78b23ac04de65342aaca2098af86afcbc5349f1cdeae711017c9e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/performance.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 692,
+      "sha256": "9661ba5d0b3be226def74da005089426f8d7c35774c416cea0d2027816a2b476",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/project.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 27330,
+      "sha256": "d9c89c7fc1af270da15e1cdd9207c6291d3c00bfc9afa2b8a89773b898edafb1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/seo.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 2584,
+      "sha256": "05f31d1b8c94c2552c999014f74badb154d8ccd66a10bc413187ffcc94a4b96c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/sitemap.config.json",
+      "contentType": "application/json",
+      "bytes": 219,
+      "sha256": "e05f9583c8ec2b7f99c3d20d7f99580dbf6d4afc233c8f450877c95969ea1620",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/config/web-vitals.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 750,
+      "sha256": "65db5711d0ca896d613eafbc94710ef0f2458b585218edbf72b6b89c43776802",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/docs/BLUEPRINT.md",
+      "contentType": "text/plain",
+      "bytes": 594,
+      "sha256": "5b19ec3940f4eed9729fbfc2f5732f1d06a505750c120e6745602c2b03352732",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/docs/NAMING-CONVENTIONS.md",
+      "contentType": "text/plain",
+      "bytes": 847,
+      "sha256": "6f68c2b70e2ccadd6a1b34fd598ad49fdf409b5a8c839a6915f5f468babd136e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/docs/PROJECT.md",
+      "contentType": "text/markdown",
+      "bytes": 1164,
+      "sha256": "f211e51ef8f5334251eabad4a8b3916bac8c294eb16e97a4b64ec4b8d90fdba4",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/footer.php",
+      "contentType": "application/x-php",
+      "bytes": 660,
+      "sha256": "107baa7ca52188db5398ce492e439e2c8f6aeadd1e6656f8934a7bcfa2b9b027",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/front-page.php",
+      "contentType": "application/x-php",
+      "bytes": 585,
+      "sha256": "ffc5c6f1d5f1c155a695f1031ac951e1ebef34e19775c02a2ec3f15b781cb423",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/functions.php",
+      "contentType": "application/x-php",
+      "bytes": 1257,
+      "sha256": "a2c35cc581fd533c494483be5234cdb5472bc9be76bd48f791f766b6d736e83f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/header.php",
+      "contentType": "application/x-php",
+      "bytes": 866,
+      "sha256": "8cff31830bc50036f673f44cd195678c58fa3b7595a45a7452b10ed9607b7c06",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/home.php",
+      "contentType": "application/x-php",
+      "bytes": 976,
+      "sha256": "6caa2c1c6bfbe71930c451d5db87ca8f1af54161d793cb952c5c71d1ec707c1e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/inc/schema.php",
+      "contentType": "application/x-php",
+      "bytes": 565,
+      "sha256": "63120be9157c0653ffbb2296fd12486ee4b0cd59d7fe22bdc2685c6931b6e093",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/inc/seo.php",
+      "contentType": "application/x-php",
+      "bytes": 666,
+      "sha256": "53c8926f1ed1a26a44026083258b20749d9fea01a9e0b8ffd1e39ada684e7768",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/inc/sitemap.php",
+      "contentType": "application/x-php",
+      "bytes": 378,
+      "sha256": "f8d696b1c76ce5082c2a801f2803da87742c5d879f7baeaeae25760a28f28442",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/inc/widgets.php",
+      "contentType": "application/x-php",
+      "bytes": 554,
+      "sha256": "bdfa41e4e70ee19f8a3af74bda39569c3e9f88e089af5354a4c6527bac0e796f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/index.php",
+      "contentType": "application/x-php",
+      "bytes": 578,
+      "sha256": "3bbb9ea6a0b1ed57500cb11eab2853943126f1251791ff6ffe4559b89b0a766b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/manifest.webmanifest",
+      "contentType": "application/manifest+json",
+      "bytes": 483,
+      "sha256": "5db2744692a2e23810b19e9a4d4a600eaad95f6f522708e12123be33cc8ae834",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/page.php",
+      "contentType": "application/x-php",
+      "bytes": 552,
+      "sha256": "3da04b9bacd6f4ee45f0af85014f7f49fd709ab093aa8a2006c72b70af8c3c15",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/README.md",
+      "contentType": "text/markdown",
+      "bytes": 578,
+      "sha256": "7704e8bfdb484ddc63b389be68d15e135c1092bd37cc7297d34f771c410dbb37",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/robots.txt",
+      "contentType": "text/plain",
+      "bytes": 127,
+      "sha256": "b311954e329ca986d88413f45bdae0a06c1e21b2494a0ff2aae6ad32155b899f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/screenshot.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 789,
+      "sha256": "eb9c28e318566ceb1305aecedb918b8770c1e31bb813d539f02dec9a2161a04c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/search.php",
+      "contentType": "application/x-php",
+      "bytes": 970,
+      "sha256": "f5203768fed3beddff097b8230f8d4ad8fee9a8f219bc1e80f0ec82fe31e1363",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 361,
+      "sha256": "537b75ce8443d65e7b621a50ca214da97e259be0c2d5ffd44f3f659f97b59b48",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/single.php",
+      "contentType": "application/x-php",
+      "bytes": 732,
+      "sha256": "72a1f59f9c52ce705bc7cee78ff291d28c860d7b89245720c08bdc1b606be6bd",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/STRUCTURE.md",
+      "contentType": "text/markdown",
+      "bytes": 1716,
+      "sha256": "4850743c41ff143f78ce692de842fc847fe84948d3e5119b0ba6e72020c618e9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/style.css",
+      "contentType": "text/css",
+      "bytes": 831,
+      "sha256": "caa4489e01f1a419721cf17a96fce3c1f09ee4ea26ff6a6c9369faa00f9def15",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/ads/ad-in-article.php",
+      "contentType": "application/x-php",
+      "bytes": 358,
+      "sha256": "72737bda6a9e77a9bb6fe015da3f960e1d67d75b69a77c456e4a20223b29125d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/ads/ad-leaderboard.php",
+      "contentType": "application/x-php",
+      "bytes": 362,
+      "sha256": "21201f44204ba888fbcbbe3371ac2aaf8717712ff45c6e05f590e04a7470c941",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/ads/ad-sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 346,
+      "sha256": "409373c28b62da3a21d35efeb42a144840bafbcc10a5559073d3012de21722db",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/author-box.php",
+      "contentType": "application/x-php",
+      "bytes": 605,
+      "sha256": "9f78991629cbb5ed51f994b628433d83af375f8d6139a3fd58dba4e8c1c9f9be",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/banner-adv.php",
+      "contentType": "application/x-php",
+      "bytes": 466,
+      "sha256": "6b16bb49fae06bbd3ee40ff33c1ac3a747a5225a8ff4bf175299f86c341e9cd0",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/breadcrumb.php",
+      "contentType": "application/x-php",
+      "bytes": 483,
+      "sha256": "bc3b8c48fea030322d5d10252c69ad479b40cbab1b2e184d4eb74d5ffadea7e2",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/breaking-news.php",
+      "contentType": "application/x-php",
+      "bytes": 447,
+      "sha256": "18a9f8d9d7c105d5c1c73678ac11d12afe963342997a9c5cb4854edb7ceafe9f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/card-news.php",
+      "contentType": "application/x-php",
+      "bytes": 614,
+      "sha256": "6a3e9fd2d23db80ae8f3c51efc92f4933aaa12f56bfb60a3acbbe204a7e2b611",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/comments.php",
+      "contentType": "application/x-php",
+      "bytes": 423,
+      "sha256": "1460f28d725dca4410fd47a1cd599d57989e07dcec9f0a0fbd4c17424d4bd9f8",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/gallery.php",
+      "contentType": "application/x-php",
+      "bytes": 593,
+      "sha256": "380a457e8e4c59585b2451266a396691229c5af8074013a7a45074564c09dbbe",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/hero.php",
+      "contentType": "application/x-php",
+      "bytes": 571,
+      "sha256": "82ef0bac790ab65d4b556f5f5bd017fcc95da81031935c486a059eb947340bf4",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/live-banner.php",
+      "contentType": "application/x-php",
+      "bytes": 438,
+      "sha256": "0bf4d8e75e3b07a08fb36e58af9ae3cbdf8c61e7533467e13351136a8bda236a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/newsletter.php",
+      "contentType": "application/x-php",
+      "bytes": 448,
+      "sha256": "d09f77b62fcc81c378ab1cde246a4ab584c6db8955d681fb4a7f49f65b1f5bf5",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/related-articles.php",
+      "contentType": "application/x-php",
+      "bytes": 604,
+      "sha256": "116b1710936db7d2d3c2bfe99616d9df639efdfaabd5a585e1b8a6fde74ff235",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/social-share.php",
+      "contentType": "application/x-php",
+      "bytes": 442,
+      "sha256": "91e352359a27c76bdf3e7388e6f1f0c20573c84e9d20028745053e4c9823f704",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/components/video-block.php",
+      "contentType": "application/x-php",
+      "bytes": 623,
+      "sha256": "ed82eba21224d6517d144b7f183ae36913b1479a82315c644997aa4ab514b469",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/navigation.php",
+      "contentType": "application/x-php",
+      "bytes": 605,
+      "sha256": "4576e5347389b1a2c3a3374e5f24d298d715ffc2e8df29df05b07f71e48dc56a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/schema/newsarticle.php",
+      "contentType": "application/x-php",
+      "bytes": 663,
+      "sha256": "8c542a3ccddd76a71626d36944ae614672cc31aa77abaf25a2f0d8a9b674c4c5",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/template-parts/seo/meta-tags.php",
+      "contentType": "application/x-php",
+      "bytes": 620,
+      "sha256": "cf221e7dc7ee9ca425f1d2f1dd998c3af78d8ebd486598f42b0a5e034958ff9d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "sprint-sport/theme.json",
+      "contentType": "application/json",
+      "bytes": 443,
+      "sha256": "3ddb055bb2be7649666be76e10b7700431e8c20715997be37239ec231919fa77",
+      "version": "0.1.0"
+    }
+  ]
+}

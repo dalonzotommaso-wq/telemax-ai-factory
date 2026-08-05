@@ -1,0 +1,6 @@
+# Gruppo AIR Blog — robots
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+
+Sitemap: https://blog.gruppoair.example/wp-sitemap.xml

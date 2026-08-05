@@ -1,0 +1,6 @@
+# Il Corriere della Sera Nuovo — robots
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+
+Sitemap: https://www.quotidianonazionale.example/wp-sitemap.xml

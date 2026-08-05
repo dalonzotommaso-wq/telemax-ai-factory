@@ -1,0 +1,6 @@
+# TGMAX — robots
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+
+Sitemap: https://www.tgmax.it/wp-sitemap.xml

@@ -1,0 +1,17 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 2,
+  "settings": {
+    "color": {
+      "palette": [
+        { "slug": "primary", "color": "#003366", "name": "Primary" },
+        { "slug": "secondary", "color": "#B8860B", "name": "Secondary" }
+      ]
+    },
+    "layout": { "contentSize": "800px", "wideSize": "1200px" }
+  },
+  "custom": {
+    "generatedBy": "Telemax AI Factory",
+    "generatorVersion": "0.1.0"
+  }
+}

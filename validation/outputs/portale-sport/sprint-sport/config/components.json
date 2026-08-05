@@ -1,0 +1,112 @@
+[
+  {
+    "id": "hero",
+    "name": "Hero",
+    "category": "hero",
+    "regions": ["hero"],
+    "ariaRole": "region",
+    "hasMedia": true,
+    "schemaType": "NewsArticle"
+  },
+  {
+    "id": "card-news",
+    "name": "Card News",
+    "category": "list",
+    "regions": ["content", "sidebar"],
+    "ariaRole": "article",
+    "hasMedia": true,
+    "schemaType": "NewsArticle"
+  },
+  {
+    "id": "breaking-news",
+    "name": "Breaking News",
+    "category": "alert",
+    "regions": ["header", "hero"],
+    "ariaRole": "alert",
+    "hasMedia": false
+  },
+  {
+    "id": "live-banner",
+    "name": "Live Banner",
+    "category": "alert",
+    "regions": ["header", "hero"],
+    "ariaRole": "status",
+    "hasMedia": false
+  },
+  {
+    "id": "video-block",
+    "name": "Video Block",
+    "category": "media",
+    "regions": ["content", "hero"],
+    "ariaRole": "region",
+    "hasMedia": true,
+    "schemaType": "VideoObject"
+  },
+  {
+    "id": "gallery",
+    "name": "Gallery",
+    "category": "media",
+    "regions": ["content"],
+    "ariaRole": "group",
+    "hasMedia": true,
+    "schemaType": "ImageGallery"
+  },
+  {
+    "id": "related-articles",
+    "name": "Related Articles",
+    "category": "list",
+    "regions": ["content"],
+    "ariaRole": "complementary",
+    "hasMedia": true
+  },
+  {
+    "id": "author-box",
+    "name": "Author Box",
+    "category": "meta",
+    "regions": ["content"],
+    "ariaRole": "region",
+    "hasMedia": true,
+    "schemaType": "Person"
+  },
+  {
+    "id": "breadcrumb",
+    "name": "Breadcrumb",
+    "category": "meta",
+    "regions": ["content"],
+    "ariaRole": "navigation",
+    "hasMedia": false,
+    "schemaType": "BreadcrumbList"
+  },
+  {
+    "id": "social-share",
+    "name": "Social Share",
+    "category": "engagement",
+    "regions": ["content"],
+    "ariaRole": "group",
+    "hasMedia": false
+  },
+  {
+    "id": "newsletter",
+    "name": "Newsletter",
+    "category": "engagement",
+    "regions": ["content", "sidebar", "footer"],
+    "ariaRole": "form",
+    "hasMedia": false
+  },
+  {
+    "id": "comments",
+    "name": "Comments",
+    "category": "engagement",
+    "regions": ["content"],
+    "ariaRole": "region",
+    "hasMedia": false
+  },
+  {
+    "id": "banner-adv",
+    "name": "Banner ADV",
+    "category": "advertising",
+    "regions": ["header", "sidebar", "content", "footer"],
+    "ariaRole": "complementary",
+    "hasMedia": false
+  }
+]

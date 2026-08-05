@@ -1,0 +1,16 @@
+{
+  "generatedBy": "Telemax AI Factory",
+  "generatorVersion": "0.1.0",
+  "slots": [
+    {
+      "id": "masthead",
+      "label": "Masthead",
+      "location": "leaderboard"
+    },
+    {
+      "id": "sidebar-premium",
+      "label": "Sidebar Premium",
+      "location": "sidebar"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "generatedBy": "Telemax AI Factory",
+  "generatorVersion": "0.1.0",
+  "sitemap": {
+    "enabled": true,
+    "maxUrls": 2000,
+    "news": { "enabled": true, "publication": "Vivere Magazine", "language": "it_IT" }
+  }
+}

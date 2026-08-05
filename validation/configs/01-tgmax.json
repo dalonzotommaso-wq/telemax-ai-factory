@@ -1,0 +1,21 @@
+{
+  "siteName": "TGMAX",
+  "siteDescription": "Il portale di news della TV locale abruzzese: cronaca, politica, sport e cultura.",
+  "language": "it_IT",
+  "siteUrl": "https://www.tgmax.it",
+  "author": "Redazione TGMAX",
+  "primaryColor": "#C8102E",
+  "secondaryColor": "#1A1A1A",
+  "categories": ["Cronaca", "Politica", "Sport", "Cultura", "Territorio"],
+  "menu": [
+    { "label": "Home", "path": "/" },
+    { "label": "Cronaca", "path": "/category/cronaca" },
+    { "label": "Sport", "path": "/category/sport" },
+    { "label": "Dirette", "path": "/dirette" }
+  ],
+  "adSlots": [
+    { "id": "leaderboard-top", "label": "Leaderboard Top", "location": "leaderboard" },
+    { "id": "sidebar-1", "label": "Sidebar Box", "location": "sidebar" },
+    { "id": "in-article-1", "label": "In-Article", "location": "in-article" }
+  ]
+}

@@ -1,0 +1,6 @@
+# Sprint Sport — robots
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+
+Sitemap: https://www.sprintsport.example/wp-sitemap.xml

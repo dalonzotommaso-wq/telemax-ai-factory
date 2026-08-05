@@ -1,0 +1,89 @@
+{
+  "defaults": {
+    "titleSeparator": " — ",
+    "robots": "index,follow",
+    "twitterCard": "summary_large_image"
+  },
+  "pages": [
+    {
+      "page": "front-page",
+      "title": "Gruppo AIR Blog",
+      "description": "Blog aziendale del Gruppo AIR: novità, casi studio, cultura d'impresa e comunicati.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "NewsMediaOrganization",
+      "jsonld": true
+    },
+    {
+      "page": "single",
+      "title": "{post_title} — {site_name}",
+      "description": "Blog aziendale del Gruppo AIR: novità, casi studio, cultura d'impresa e comunicati.",
+      "openGraph": {
+        "type": "article",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "NewsArticle",
+      "jsonld": true
+    },
+    {
+      "page": "category",
+      "title": "{category} — {site_name}",
+      "description": "Blog aziendale del Gruppo AIR: novità, casi studio, cultura d'impresa e comunicati.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "CollectionPage",
+      "jsonld": true
+    },
+    {
+      "page": "archive",
+      "title": "{archive_title} — {site_name}",
+      "description": "Blog aziendale del Gruppo AIR: novità, casi studio, cultura d'impresa e comunicati.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "CollectionPage",
+      "jsonld": true
+    },
+    {
+      "page": "page",
+      "title": "{page_title} — {site_name}",
+      "description": "Blog aziendale del Gruppo AIR: novità, casi studio, cultura d'impresa e comunicati.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "WebPage",
+      "jsonld": true
+    }
+  ]
+}

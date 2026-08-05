@@ -1,0 +1,48 @@
+{
+  "standard": "WCAG 2.2 AA",
+  "landmarks": ["banner", "navigation", "main", "complementary", "contentinfo"],
+  "ariaRoles": {
+    "header": "banner",
+    "nav": "navigation",
+    "main": "main",
+    "sidebar": "complementary",
+    "footer": "contentinfo"
+  },
+  "keyboard": [
+    "All interactive elements are reachable and operable by keyboard.",
+    "Visible skip-link to main content.",
+    "Logical tab order following the document flow."
+  ],
+  "focus": [
+    "Never remove focus outlines; provide a visible focus style.",
+    "Trap focus within modals and restore it on close.",
+    "Move focus to newly revealed content (e.g. live regions)."
+  ],
+  "contrast": [
+    {
+      "pair": "text-on-background",
+      "ratio": 18.88,
+      "requiredRatio": 4.5,
+      "passes": true,
+      "passesAA": true,
+      "passesAALarge": true
+    },
+    {
+      "pair": "primary-on-background",
+      "ratio": 3.19,
+      "requiredRatio": 3,
+      "passes": true,
+      "passesAA": false,
+      "passesAALarge": true
+    },
+    {
+      "pair": "background-on-primary",
+      "ratio": 3.19,
+      "requiredRatio": 3,
+      "passes": true,
+      "passesAA": false,
+      "passesAALarge": true
+    }
+  ],
+  "contrastPasses": true
+}

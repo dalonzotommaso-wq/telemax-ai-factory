@@ -1,0 +1,37 @@
+/*
+Theme Name: Il Corriere della Sera Nuovo
+Theme URI: https://www.quotidianonazionale.example
+Author: Redazione Nazionale
+Description: Quotidiano nazionale di informazione: economia, esteri, politica e approfondimenti.
+Version: 0.1.0
+Requires at least: 6.4
+Requires PHP: 8.1
+License: GPL-2.0-or-later
+Text Domain: il-corriere-della-sera-nuovo
+Tags: news, magazine, blog
+Generated-By: Telemax AI Factory (project scaffold — not production code)
+*/
+
+:root {
+  --color-primary: #003366;
+  --color-secondary: #b8860b;
+  --container: 1200px;
+}
+
+/* Scaffold styles only — extend during theme completion. */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #111;
+}
+.site-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.site-header {
+  border-bottom: 3px solid var(--color-primary);
+}
+.article-title {
+  color: var(--color-secondary);
+}

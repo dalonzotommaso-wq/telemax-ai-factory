@@ -1,0 +1,21 @@
+{
+  "generatedBy": "Telemax AI Factory",
+  "generatorVersion": "0.1.0",
+  "slots": [
+    {
+      "id": "top-leaderboard",
+      "label": "Top Leaderboard",
+      "location": "leaderboard"
+    },
+    {
+      "id": "live-sidebar",
+      "label": "Live Sidebar",
+      "location": "sidebar"
+    },
+    {
+      "id": "match-in-article",
+      "label": "Match In-Article",
+      "location": "in-article"
+    }
+  ]
+}

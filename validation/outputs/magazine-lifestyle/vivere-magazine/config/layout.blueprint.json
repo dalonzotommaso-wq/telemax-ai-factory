@@ -1,0 +1,215 @@
+{
+  "regions": ["header", "navigation", "hero", "content", "sidebar", "widgets", "ads", "footer"],
+  "pages": [
+    {
+      "page": "front-page",
+      "regions": [
+        {
+          "region": "header",
+          "components": ["breaking-news", "live-banner", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "navigation",
+          "components": [],
+          "ads": []
+        },
+        {
+          "region": "hero",
+          "components": ["hero", "breaking-news", "live-banner", "video-block"],
+          "ads": []
+        },
+        {
+          "region": "content",
+          "components": [
+            "card-news",
+            "video-block",
+            "gallery",
+            "related-articles",
+            "author-box",
+            "breadcrumb",
+            "social-share",
+            "newsletter",
+            "comments",
+            "banner-adv"
+          ],
+          "ads": []
+        },
+        {
+          "region": "sidebar",
+          "components": ["card-news", "newsletter", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "ads",
+          "components": [],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "footer",
+          "components": ["newsletter", "banner-adv"],
+          "ads": []
+        }
+      ]
+    },
+    {
+      "page": "single",
+      "regions": [
+        {
+          "region": "header",
+          "components": ["breaking-news", "live-banner", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "navigation",
+          "components": [],
+          "ads": []
+        },
+        {
+          "region": "content",
+          "components": [
+            "card-news",
+            "video-block",
+            "gallery",
+            "related-articles",
+            "author-box",
+            "breadcrumb",
+            "social-share",
+            "newsletter",
+            "comments",
+            "banner-adv"
+          ],
+          "ads": []
+        },
+        {
+          "region": "sidebar",
+          "components": ["card-news", "newsletter", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "ads",
+          "components": [],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "footer",
+          "components": ["newsletter", "banner-adv"],
+          "ads": []
+        }
+      ]
+    },
+    {
+      "page": "category",
+      "regions": [
+        {
+          "region": "header",
+          "components": ["breaking-news", "live-banner", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "navigation",
+          "components": [],
+          "ads": []
+        },
+        {
+          "region": "content",
+          "components": [
+            "card-news",
+            "video-block",
+            "gallery",
+            "related-articles",
+            "author-box",
+            "breadcrumb",
+            "social-share",
+            "newsletter",
+            "comments",
+            "banner-adv"
+          ],
+          "ads": []
+        },
+        {
+          "region": "sidebar",
+          "components": ["card-news", "newsletter", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "footer",
+          "components": ["newsletter", "banner-adv"],
+          "ads": []
+        }
+      ]
+    },
+    {
+      "page": "archive",
+      "regions": [
+        {
+          "region": "header",
+          "components": ["breaking-news", "live-banner", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "navigation",
+          "components": [],
+          "ads": []
+        },
+        {
+          "region": "content",
+          "components": [
+            "card-news",
+            "video-block",
+            "gallery",
+            "related-articles",
+            "author-box",
+            "breadcrumb",
+            "social-share",
+            "newsletter",
+            "comments",
+            "banner-adv"
+          ],
+          "ads": []
+        },
+        {
+          "region": "footer",
+          "components": ["newsletter", "banner-adv"],
+          "ads": []
+        }
+      ]
+    },
+    {
+      "page": "page",
+      "regions": [
+        {
+          "region": "header",
+          "components": ["breaking-news", "live-banner", "banner-adv"],
+          "ads": ["hero-banner", "native-1"]
+        },
+        {
+          "region": "navigation",
+          "components": [],
+          "ads": []
+        },
+        {
+          "region": "content",
+          "components": [
+            "card-news",
+            "video-block",
+            "gallery",
+            "related-articles",
+            "author-box",
+            "breadcrumb",
+            "social-share",
+            "newsletter",
+            "comments",
+            "banner-adv"
+          ],
+          "ads": []
+        },
+        {
+          "region": "footer",
+          "components": ["newsletter", "banner-adv"],
+          "ads": []
+        }
+      ]
+    }
+  ]
+}

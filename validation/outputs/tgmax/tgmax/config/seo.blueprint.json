@@ -1,0 +1,89 @@
+{
+  "defaults": {
+    "titleSeparator": " — ",
+    "robots": "index,follow",
+    "twitterCard": "summary_large_image"
+  },
+  "pages": [
+    {
+      "page": "front-page",
+      "title": "TGMAX",
+      "description": "Il portale di news della TV locale abruzzese: cronaca, politica, sport e cultura.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "NewsMediaOrganization",
+      "jsonld": true
+    },
+    {
+      "page": "single",
+      "title": "{post_title} — {site_name}",
+      "description": "Il portale di news della TV locale abruzzese: cronaca, politica, sport e cultura.",
+      "openGraph": {
+        "type": "article",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "NewsArticle",
+      "jsonld": true
+    },
+    {
+      "page": "category",
+      "title": "{category} — {site_name}",
+      "description": "Il portale di news della TV locale abruzzese: cronaca, politica, sport e cultura.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "CollectionPage",
+      "jsonld": true
+    },
+    {
+      "page": "archive",
+      "title": "{archive_title} — {site_name}",
+      "description": "Il portale di news della TV locale abruzzese: cronaca, politica, sport e cultura.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "CollectionPage",
+      "jsonld": true
+    },
+    {
+      "page": "page",
+      "title": "{page_title} — {site_name}",
+      "description": "Il portale di news della TV locale abruzzese: cronaca, politica, sport e cultura.",
+      "openGraph": {
+        "type": "website",
+        "image": "assets/images/placeholders/social-default.png"
+      },
+      "twitter": {
+        "card": "summary_large_image"
+      },
+      "canonical": "{permalink}",
+      "robots": "index,follow",
+      "schema": "WebPage",
+      "jsonld": true
+    }
+  ]
+}

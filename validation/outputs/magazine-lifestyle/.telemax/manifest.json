@@ -1,0 +1,470 @@
+{
+  "generator": "wordpress-news",
+  "generatorVersion": "0.1.0",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "fileCount": 66,
+  "artifacts": [
+    {
+      "path": "vivere-magazine/.telemax/build-info.json",
+      "contentType": "text/plain",
+      "bytes": 113,
+      "sha256": "75b19def5ab98b612959258b3756da27e63ecc723378b3618d0ade243a0822ff",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/404.php",
+      "contentType": "application/x-php",
+      "bytes": 663,
+      "sha256": "274e46bee3f0f407d0a1cd203005aba2cf9b216bed438ee50f71081a03a9ac15",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/archive.php",
+      "contentType": "application/x-php",
+      "bytes": 692,
+      "sha256": "d1a42378c246f51378d22de7215c32b184628d489817e5f6bf8d55a1bc708f36",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/css/main.css",
+      "contentType": "text/css",
+      "bytes": 742,
+      "sha256": "fdcb3d7d68a57cb01ef559b6b501c90eaf5f48ab3d5b089c1ef1e433bd9b04ba",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/css/tokens.css",
+      "contentType": "text/plain",
+      "bytes": 831,
+      "sha256": "9613b267db53d6bf394a5d273f50f97ce066f96b2bd289da5acb58d2002b0e72",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/images/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/images/icons/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/images/logos/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/images/placeholders/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/assets/js/main.js",
+      "contentType": "text/javascript",
+      "bytes": 391,
+      "sha256": "ac6f613af247e27188e57c5b1988b71294c24bf11fcc6084340c06432931da52",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/author.php",
+      "contentType": "application/x-php",
+      "bytes": 880,
+      "sha256": "594c48ca118c8811329c1e7bfb46e287d7b4a77098cfb5eeb74572a5b767bf43",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/category.php",
+      "contentType": "application/x-php",
+      "bytes": 703,
+      "sha256": "c074733e2143ad631ecf3f501c5a157a58a2ded1e61f34f8fdad6466fcebe6a6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/accessibility.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1248,
+      "sha256": "abb099a53774666e0ba40dbdc585b3eaffc0f73bd0a7091674299c6a3df36d4c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/ads.config.json",
+      "contentType": "application/json",
+      "bytes": 274,
+      "sha256": "1ded7a06bf0b46998d71610aca3eab90f87a81364265f817ec52df587e0f42c3",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/advertising.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1470,
+      "sha256": "f706058c5b0f915ddd2906add2dadcec56a4b87e863f3452ab02ea78b93178e9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/components.json",
+      "contentType": "text/plain",
+      "bytes": 2597,
+      "sha256": "654929ef67b155eba0a4f607dbbdcc027e780a35ab4be73b8bca465069dfac12",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/design-tokens.json",
+      "contentType": "text/plain",
+      "bytes": 1647,
+      "sha256": "46e3fc390e63aef97e55801c15d1a6657e6fbe717648f45e9a2acfb44ea23995",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/layout.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 6185,
+      "sha256": "e0c0c91cbfd9c22429b8fdd58dd1acaa888476a2c838794193b316668bb4a3f0",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/performance.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 692,
+      "sha256": "9661ba5d0b3be226def74da005089426f8d7c35774c416cea0d2027816a2b476",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/project.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 26856,
+      "sha256": "1bec2e79d2091dec562ae210594ce2aeabe3a3b5f4120fed554f9722e34466f1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/seo.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 2527,
+      "sha256": "2c665eafb216686fd80b7f80ac2dfc03d28dc125756fcb42e3f155f10999320f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/sitemap.config.json",
+      "contentType": "application/json",
+      "bytes": 222,
+      "sha256": "bca766c8f2763ee7e90f1305178a1840e4c65b0a4bd393b10cfa2d7dcb6f617e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/config/web-vitals.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 750,
+      "sha256": "65db5711d0ca896d613eafbc94710ef0f2458b585218edbf72b6b89c43776802",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/docs/BLUEPRINT.md",
+      "contentType": "text/plain",
+      "bytes": 597,
+      "sha256": "7dfc0abd6b0aef1e86382c1384472ee84f9c8ab69f7896eb562ebf7ac58c1deb",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/docs/NAMING-CONVENTIONS.md",
+      "contentType": "text/plain",
+      "bytes": 847,
+      "sha256": "6f68c2b70e2ccadd6a1b34fd598ad49fdf409b5a8c839a6915f5f468babd136e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/docs/PROJECT.md",
+      "contentType": "text/markdown",
+      "bytes": 1167,
+      "sha256": "34f47b81b59ea6cefae3632258d6445b38453a6bf818c8be294ef73c0f84abcd",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/footer.php",
+      "contentType": "application/x-php",
+      "bytes": 666,
+      "sha256": "09340631d874341bb9ce490d0c2f702b20916338b111c28408ea414fe7b8c0e0",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/front-page.php",
+      "contentType": "application/x-php",
+      "bytes": 588,
+      "sha256": "57891aa2451425b82368d22bc8fa91e7813eea3beb0512998a72416b6277bb74",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/functions.php",
+      "contentType": "application/x-php",
+      "bytes": 1266,
+      "sha256": "1677e707f33120cb361461e1f9bfb46d488ad4e525f72e79c1afbbe69455b118",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/header.php",
+      "contentType": "application/x-php",
+      "bytes": 863,
+      "sha256": "b470a46c5bd3e36101675bffbbd3afaced6b9c8929069e20feef7ba9d0516f72",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/home.php",
+      "contentType": "application/x-php",
+      "bytes": 979,
+      "sha256": "5c67b57b21cba578bd38139d64705224a8e17dcba66459beaf87e1534484a6a3",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/inc/schema.php",
+      "contentType": "application/x-php",
+      "bytes": 574,
+      "sha256": "2def649ac017c97f4de54a533ac9590fa7d6838178451af82c5c653de1480f95",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/inc/seo.php",
+      "contentType": "application/x-php",
+      "bytes": 660,
+      "sha256": "67047bff4f6e02fdbbf7decdd3207db7011654b253d648c8792798dc92481430",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/inc/sitemap.php",
+      "contentType": "application/x-php",
+      "bytes": 381,
+      "sha256": "e10f76b493989f7a1594a5e9a3157945202f6d4f0e020451ecc229516598b04a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/inc/widgets.php",
+      "contentType": "application/x-php",
+      "bytes": 557,
+      "sha256": "7746c53d90c284cb88f46a2696f6da536ac2bdb7008cba16ae317a0db91f9dad",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/index.php",
+      "contentType": "application/x-php",
+      "bytes": 581,
+      "sha256": "edbe33da55dbdedd597fe575589e21014f050f0c096e7c77252cf3f36489d04f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/manifest.webmanifest",
+      "contentType": "application/manifest+json",
+      "bytes": 477,
+      "sha256": "4754f7b60186765ae749dc75b6512a112e89815e04af72a6b815c551ed935c4d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/page.php",
+      "contentType": "application/x-php",
+      "bytes": 555,
+      "sha256": "220e9acda5cb9a3cfa694ea3b356a3f1318e70fb14907c313e002f698bdb0fe1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/README.md",
+      "contentType": "text/markdown",
+      "bytes": 563,
+      "sha256": "ae9147be6322b851c489a7a21ee48866e3f71973c5b87aa8dd58529ba9515af2",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/robots.txt",
+      "contentType": "text/plain",
+      "bytes": 133,
+      "sha256": "8167d52dac5bf8c703f299e0333bbaddb65793d206ce3d571b2a3671da70237a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/screenshot.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 795,
+      "sha256": "1e370fa5a7d279912aff975b85d5a2f9f4d787d637e02f98af5cb05a14ac6429",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/search.php",
+      "contentType": "application/x-php",
+      "bytes": 976,
+      "sha256": "e037a548d0b3ce9748825ad2f0e5f2426d8a139d284d9ccbfe2c09b1c0ad387e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 364,
+      "sha256": "fb390658bb3a79f78b516552e4b6f22e1f66895cea0717a9287956abc8579303",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/single.php",
+      "contentType": "application/x-php",
+      "bytes": 735,
+      "sha256": "bfe3f97aecccdcc55098e6722890e242c75c9dc4db0c2ca5768c5d099c6f3e29",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/STRUCTURE.md",
+      "contentType": "text/markdown",
+      "bytes": 1722,
+      "sha256": "0af1861a042c90f5e4369bcf8c2fd520128921e54ee2ead1f738f19e31696006",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/style.css",
+      "contentType": "text/css",
+      "bytes": 832,
+      "sha256": "83720b07d6481855d1be4349f78db3fea4eb98fbe057804b97575c3ef2ddc714",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/ads/ad-in-article.php",
+      "contentType": "application/x-php",
+      "bytes": 361,
+      "sha256": "52736cf30a60af7b6d4af8c3a9899ce84b0401097c30db07329c99657f565447",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/ads/ad-leaderboard.php",
+      "contentType": "application/x-php",
+      "bytes": 365,
+      "sha256": "c9320993e523e1c7c953d97a4306a2edd185a429a2557eccbd610950fca864e8",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/ads/ad-sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 349,
+      "sha256": "bac22ae5472ad59d5c6e40bffb4c5d4bdacd34419a1224462e3b595d4819b368",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/author-box.php",
+      "contentType": "application/x-php",
+      "bytes": 608,
+      "sha256": "003a607b5871cfb3f38e4f233a9e5905ab44803d554e25703a9e02fed87a9adf",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/banner-adv.php",
+      "contentType": "application/x-php",
+      "bytes": 469,
+      "sha256": "b3dc4cdfb357b2d28efef4042bbabbf67c757106e5882cf227b87c6b9997117d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/breadcrumb.php",
+      "contentType": "application/x-php",
+      "bytes": 486,
+      "sha256": "61aeeb0c236efaa29bc3291f0810bd12895c14a468d10edc5aabda48d3bc77ae",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/breaking-news.php",
+      "contentType": "application/x-php",
+      "bytes": 450,
+      "sha256": "999fd7dd87dabd0f69a8b6be14e881494faeeab332d6ed070ba4414f40a3691b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/card-news.php",
+      "contentType": "application/x-php",
+      "bytes": 617,
+      "sha256": "b61615686324b7b939fd78a211facc1e2f8a1f31a8178aa80612e3c969acaf14",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/comments.php",
+      "contentType": "application/x-php",
+      "bytes": 426,
+      "sha256": "bda2e756686b9edccd77ea6ea739c2e59d78ca37f505dbf8ee5c7854eb3ebbed",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/gallery.php",
+      "contentType": "application/x-php",
+      "bytes": 596,
+      "sha256": "40356af3015e25ead2e96d8246e39ab86782cc2a500c266b94def248a5bc4a2d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/hero.php",
+      "contentType": "application/x-php",
+      "bytes": 574,
+      "sha256": "a75bf38dda3ed5328f37341bb03fc87986dc9bac79f50442a6c6ddb49ab5268c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/live-banner.php",
+      "contentType": "application/x-php",
+      "bytes": 441,
+      "sha256": "a3bfb2c598473264df9dd146de0ca46f5d6e5a13a550615f91e3377ac41e8aac",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/newsletter.php",
+      "contentType": "application/x-php",
+      "bytes": 451,
+      "sha256": "2484d5e03b5b571697493392d75e265f0858699a19af4ae33e976693b761652f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/related-articles.php",
+      "contentType": "application/x-php",
+      "bytes": 607,
+      "sha256": "cd1916dddf87bd4584864cfa97580f1d4809d7c3f93275ed10fbcd3425d19bff",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/social-share.php",
+      "contentType": "application/x-php",
+      "bytes": 445,
+      "sha256": "03c61ef8566448e3598af2ef92c29cdbe8e966d2ddb8aa7f81793fa9c768489a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/components/video-block.php",
+      "contentType": "application/x-php",
+      "bytes": 626,
+      "sha256": "daf07f9dcc5ab7e3f8c54c1b09d586a4d2cf80f626244f6a19344adec3fe6404",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/navigation.php",
+      "contentType": "application/x-php",
+      "bytes": 587,
+      "sha256": "d4274fdc56b6a4eda63d465b80b7a2eee0db71292ca4085b635643837d1ebdc6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/schema/newsarticle.php",
+      "contentType": "application/x-php",
+      "bytes": 669,
+      "sha256": "cc695b38fa4aff987364a9452e114b6267e73a485145ae8570ce235527bea480",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/template-parts/seo/meta-tags.php",
+      "contentType": "application/x-php",
+      "bytes": 620,
+      "sha256": "3898a813b45c2dfcceb0f5e3fd4b637c97326781566b0ce6516a35a87d428dc9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "vivere-magazine/theme.json",
+      "contentType": "application/json",
+      "bytes": 443,
+      "sha256": "418be4b93c04ada15450f5a76f327fd28b8b7aad13433de079bf8b149e423a98",
+      "version": "0.1.0"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "generatedBy": "Telemax AI Factory",
+  "generatorVersion": "0.1.0",
+  "slots": [
+    {
+      "id": "footer-cta",
+      "label": "Footer CTA",
+      "location": "sidebar"
+    }
+  ]
+}

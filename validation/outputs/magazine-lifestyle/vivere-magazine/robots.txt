@@ -1,0 +1,6 @@
+# Vivere Magazine — robots
+User-agent: *
+Allow: /
+Disallow: /wp-admin/
+
+Sitemap: https://www.viveremagazine.example/wp-sitemap.xml

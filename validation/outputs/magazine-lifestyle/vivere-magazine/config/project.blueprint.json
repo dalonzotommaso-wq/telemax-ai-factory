@@ -1,0 +1,1016 @@
+{
+  "name": "Vivere Magazine",
+  "target": "wordpress",
+  "generatorVersion": "0.1.0",
+  "directories": [
+    "config",
+    "inc",
+    "template-parts",
+    "template-parts/ads",
+    "template-parts/seo",
+    "template-parts/schema",
+    "template-parts/components",
+    "assets/css",
+    "assets/js",
+    "assets/images",
+    "assets/images/logos",
+    "assets/images/icons",
+    "assets/images/placeholders",
+    "docs",
+    ".telemax"
+  ],
+  "artifacts": [
+    {
+      "path": "style.css",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "theme.json",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "functions.php",
+      "kind": "template",
+      "dependsOn": [
+        "inc/seo.php",
+        "inc/schema.php",
+        "inc/widgets.php",
+        "inc/sitemap.php",
+        "assets/css/main.css",
+        "assets/js/main.js"
+      ]
+    },
+    {
+      "path": "front-page.php",
+      "kind": "template",
+      "dependsOn": [
+        "header.php",
+        "footer.php",
+        "sidebar.php",
+        "template-parts/ads/ad-leaderboard.php"
+      ]
+    },
+    {
+      "path": "index.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "single.php",
+      "kind": "template",
+      "dependsOn": [
+        "header.php",
+        "footer.php",
+        "sidebar.php",
+        "template-parts/schema/newsarticle.php",
+        "template-parts/ads/ad-in-article.php"
+      ]
+    },
+    {
+      "path": "category.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php", "sidebar.php"]
+    },
+    {
+      "path": "archive.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php"]
+    },
+    {
+      "path": "page.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php"]
+    },
+    {
+      "path": "header.php",
+      "kind": "template",
+      "dependsOn": ["template-parts/seo/meta-tags.php", "template-parts/navigation.php"]
+    },
+    {
+      "path": "footer.php",
+      "kind": "template",
+      "dependsOn": ["inc/widgets.php"]
+    },
+    {
+      "path": "sidebar.php",
+      "kind": "template",
+      "dependsOn": ["template-parts/ads/ad-sidebar.php"]
+    },
+    {
+      "path": "template-parts/navigation.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/ads/ad-leaderboard.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/ads/ad-sidebar.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/ads/ad-in-article.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "config/ads.config.json",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "inc/widgets.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "inc/seo.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/seo/meta-tags.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "inc/schema.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/schema/newsarticle.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "inc/sitemap.php",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "config/sitemap.config.json",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "manifest.webmanifest",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "home.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php", "sidebar.php"]
+    },
+    {
+      "path": "search.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php"]
+    },
+    {
+      "path": "author.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php", "sidebar.php"]
+    },
+    {
+      "path": "404.php",
+      "kind": "template",
+      "dependsOn": ["header.php", "footer.php"]
+    },
+    {
+      "path": "assets/css/main.css",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "assets/js/main.js",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "screenshot.svg",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "README.md",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "STRUCTURE.md",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "docs/PROJECT.md",
+      "kind": "template",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/hero.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/card-news.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/breaking-news.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/live-banner.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/video-block.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/gallery.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/related-articles.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/author-box.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/breadcrumb.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/social-share.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/newsletter.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/comments.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "template-parts/components/banner-adv.php",
+      "kind": "component",
+      "dependsOn": []
+    },
+    {
+      "path": "robots.txt",
+      "kind": "emit",
+      "dependsOn": []
+    },
+    {
+      "path": "assets/css/tokens.css",
+      "kind": "asset",
+      "dependsOn": ["config/design-tokens.json"]
+    },
+    {
+      "path": ".telemax/build-info.json",
+      "kind": "emit",
+      "dependsOn": []
+    },
+    {
+      "path": "docs/NAMING-CONVENTIONS.md",
+      "kind": "emit",
+      "dependsOn": []
+    },
+    {
+      "path": "docs/BLUEPRINT.md",
+      "kind": "blueprint",
+      "dependsOn": ["config/project.blueprint.json"]
+    },
+    {
+      "path": "config/project.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/design-tokens.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/layout.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/components.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/seo.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/accessibility.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/web-vitals.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/advertising.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    },
+    {
+      "path": "config/performance.blueprint.json",
+      "kind": "blueprint",
+      "dependsOn": []
+    }
+  ],
+  "designTokens": {
+    "colors": {
+      "primary": "#E75480",
+      "secondary": "#2E2E2E",
+      "text": "#111111",
+      "text-muted": "#5b5b5b",
+      "background": "#ffffff",
+      "surface": "#f6f6f6",
+      "border": "#e2e2e2",
+      "link": "#E75480",
+      "breaking": "#c1121f",
+      "live": "#e63946"
+    },
+    "typography": {
+      "fontFamilyBody": "Georgia, \"Times New Roman\", serif",
+      "fontFamilyHeading": "\"Helvetica Neue\", Arial, sans-serif",
+      "baseSize": "18px",
+      "scale": {
+        "xs": "0.75rem",
+        "sm": "0.875rem",
+        "base": "1rem",
+        "lg": "1.25rem",
+        "xl": "1.5rem",
+        "2xl": "2rem",
+        "3xl": "2.5rem"
+      },
+      "lineHeight": {
+        "tight": 1.2,
+        "normal": 1.6,
+        "loose": 1.8
+      },
+      "weights": {
+        "regular": 400,
+        "medium": 500,
+        "bold": 700
+      }
+    },
+    "spacing": {
+      "xs": "4px",
+      "sm": "8px",
+      "md": "16px",
+      "lg": "24px",
+      "xl": "40px",
+      "2xl": "64px"
+    },
+    "breakpoints": {
+      "sm": "480px",
+      "md": "768px",
+      "lg": "1024px",
+      "xl": "1280px"
+    },
+    "zIndex": {
+      "base": 0,
+      "dropdown": 100,
+      "sticky": 200,
+      "header": 300,
+      "overlay": 400,
+      "modal": 500
+    },
+    "radius": {
+      "none": "0",
+      "sm": "4px",
+      "md": "8px",
+      "lg": "16px",
+      "pill": "999px"
+    },
+    "shadows": {
+      "sm": "0 1px 2px rgba(0,0,0,0.08)",
+      "md": "0 4px 12px rgba(0,0,0,0.12)",
+      "lg": "0 12px 32px rgba(0,0,0,0.16)"
+    },
+    "animations": {
+      "durations": {
+        "fast": "120ms",
+        "base": "200ms",
+        "slow": "400ms"
+      },
+      "easings": {
+        "standard": "cubic-bezier(0.2, 0, 0, 1)",
+        "emphasized": "cubic-bezier(0.3, 0, 0, 1)"
+      }
+    }
+  },
+  "layout": {
+    "regions": ["header", "navigation", "hero", "content", "sidebar", "widgets", "ads", "footer"],
+    "pages": [
+      {
+        "page": "front-page",
+        "regions": [
+          {
+            "region": "header",
+            "components": ["breaking-news", "live-banner", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "navigation",
+            "components": [],
+            "ads": []
+          },
+          {
+            "region": "hero",
+            "components": ["hero", "breaking-news", "live-banner", "video-block"],
+            "ads": []
+          },
+          {
+            "region": "content",
+            "components": [
+              "card-news",
+              "video-block",
+              "gallery",
+              "related-articles",
+              "author-box",
+              "breadcrumb",
+              "social-share",
+              "newsletter",
+              "comments",
+              "banner-adv"
+            ],
+            "ads": []
+          },
+          {
+            "region": "sidebar",
+            "components": ["card-news", "newsletter", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "ads",
+            "components": [],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "footer",
+            "components": ["newsletter", "banner-adv"],
+            "ads": []
+          }
+        ]
+      },
+      {
+        "page": "single",
+        "regions": [
+          {
+            "region": "header",
+            "components": ["breaking-news", "live-banner", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "navigation",
+            "components": [],
+            "ads": []
+          },
+          {
+            "region": "content",
+            "components": [
+              "card-news",
+              "video-block",
+              "gallery",
+              "related-articles",
+              "author-box",
+              "breadcrumb",
+              "social-share",
+              "newsletter",
+              "comments",
+              "banner-adv"
+            ],
+            "ads": []
+          },
+          {
+            "region": "sidebar",
+            "components": ["card-news", "newsletter", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "ads",
+            "components": [],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "footer",
+            "components": ["newsletter", "banner-adv"],
+            "ads": []
+          }
+        ]
+      },
+      {
+        "page": "category",
+        "regions": [
+          {
+            "region": "header",
+            "components": ["breaking-news", "live-banner", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "navigation",
+            "components": [],
+            "ads": []
+          },
+          {
+            "region": "content",
+            "components": [
+              "card-news",
+              "video-block",
+              "gallery",
+              "related-articles",
+              "author-box",
+              "breadcrumb",
+              "social-share",
+              "newsletter",
+              "comments",
+              "banner-adv"
+            ],
+            "ads": []
+          },
+          {
+            "region": "sidebar",
+            "components": ["card-news", "newsletter", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "footer",
+            "components": ["newsletter", "banner-adv"],
+            "ads": []
+          }
+        ]
+      },
+      {
+        "page": "archive",
+        "regions": [
+          {
+            "region": "header",
+            "components": ["breaking-news", "live-banner", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "navigation",
+            "components": [],
+            "ads": []
+          },
+          {
+            "region": "content",
+            "components": [
+              "card-news",
+              "video-block",
+              "gallery",
+              "related-articles",
+              "author-box",
+              "breadcrumb",
+              "social-share",
+              "newsletter",
+              "comments",
+              "banner-adv"
+            ],
+            "ads": []
+          },
+          {
+            "region": "footer",
+            "components": ["newsletter", "banner-adv"],
+            "ads": []
+          }
+        ]
+      },
+      {
+        "page": "page",
+        "regions": [
+          {
+            "region": "header",
+            "components": ["breaking-news", "live-banner", "banner-adv"],
+            "ads": ["hero-banner", "native-1"]
+          },
+          {
+            "region": "navigation",
+            "components": [],
+            "ads": []
+          },
+          {
+            "region": "content",
+            "components": [
+              "card-news",
+              "video-block",
+              "gallery",
+              "related-articles",
+              "author-box",
+              "breadcrumb",
+              "social-share",
+              "newsletter",
+              "comments",
+              "banner-adv"
+            ],
+            "ads": []
+          },
+          {
+            "region": "footer",
+            "components": ["newsletter", "banner-adv"],
+            "ads": []
+          }
+        ]
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "hero",
+      "name": "Hero",
+      "category": "hero",
+      "regions": ["hero"],
+      "ariaRole": "region",
+      "hasMedia": true,
+      "schemaType": "NewsArticle"
+    },
+    {
+      "id": "card-news",
+      "name": "Card News",
+      "category": "list",
+      "regions": ["content", "sidebar"],
+      "ariaRole": "article",
+      "hasMedia": true,
+      "schemaType": "NewsArticle"
+    },
+    {
+      "id": "breaking-news",
+      "name": "Breaking News",
+      "category": "alert",
+      "regions": ["header", "hero"],
+      "ariaRole": "alert",
+      "hasMedia": false
+    },
+    {
+      "id": "live-banner",
+      "name": "Live Banner",
+      "category": "alert",
+      "regions": ["header", "hero"],
+      "ariaRole": "status",
+      "hasMedia": false
+    },
+    {
+      "id": "video-block",
+      "name": "Video Block",
+      "category": "media",
+      "regions": ["content", "hero"],
+      "ariaRole": "region",
+      "hasMedia": true,
+      "schemaType": "VideoObject"
+    },
+    {
+      "id": "gallery",
+      "name": "Gallery",
+      "category": "media",
+      "regions": ["content"],
+      "ariaRole": "group",
+      "hasMedia": true,
+      "schemaType": "ImageGallery"
+    },
+    {
+      "id": "related-articles",
+      "name": "Related Articles",
+      "category": "list",
+      "regions": ["content"],
+      "ariaRole": "complementary",
+      "hasMedia": true
+    },
+    {
+      "id": "author-box",
+      "name": "Author Box",
+      "category": "meta",
+      "regions": ["content"],
+      "ariaRole": "region",
+      "hasMedia": true,
+      "schemaType": "Person"
+    },
+    {
+      "id": "breadcrumb",
+      "name": "Breadcrumb",
+      "category": "meta",
+      "regions": ["content"],
+      "ariaRole": "navigation",
+      "hasMedia": false,
+      "schemaType": "BreadcrumbList"
+    },
+    {
+      "id": "social-share",
+      "name": "Social Share",
+      "category": "engagement",
+      "regions": ["content"],
+      "ariaRole": "group",
+      "hasMedia": false
+    },
+    {
+      "id": "newsletter",
+      "name": "Newsletter",
+      "category": "engagement",
+      "regions": ["content", "sidebar", "footer"],
+      "ariaRole": "form",
+      "hasMedia": false
+    },
+    {
+      "id": "comments",
+      "name": "Comments",
+      "category": "engagement",
+      "regions": ["content"],
+      "ariaRole": "region",
+      "hasMedia": false
+    },
+    {
+      "id": "banner-adv",
+      "name": "Banner ADV",
+      "category": "advertising",
+      "regions": ["header", "sidebar", "content", "footer"],
+      "ariaRole": "complementary",
+      "hasMedia": false
+    }
+  ],
+  "seo": {
+    "defaults": {
+      "titleSeparator": " — ",
+      "robots": "index,follow",
+      "twitterCard": "summary_large_image"
+    },
+    "pages": [
+      {
+        "page": "front-page",
+        "title": "Vivere Magazine",
+        "description": "Magazine lifestyle: moda, benessere, viaggi, food e tendenze.",
+        "openGraph": {
+          "type": "website",
+          "image": "assets/images/placeholders/social-default.png"
+        },
+        "twitter": {
+          "card": "summary_large_image"
+        },
+        "canonical": "{permalink}",
+        "robots": "index,follow",
+        "schema": "NewsMediaOrganization",
+        "jsonld": true
+      },
+      {
+        "page": "single",
+        "title": "{post_title} — {site_name}",
+        "description": "Magazine lifestyle: moda, benessere, viaggi, food e tendenze.",
+        "openGraph": {
+          "type": "article",
+          "image": "assets/images/placeholders/social-default.png"
+        },
+        "twitter": {
+          "card": "summary_large_image"
+        },
+        "canonical": "{permalink}",
+        "robots": "index,follow",
+        "schema": "NewsArticle",
+        "jsonld": true
+      },
+      {
+        "page": "category",
+        "title": "{category} — {site_name}",
+        "description": "Magazine lifestyle: moda, benessere, viaggi, food e tendenze.",
+        "openGraph": {
+          "type": "website",
+          "image": "assets/images/placeholders/social-default.png"
+        },
+        "twitter": {
+          "card": "summary_large_image"
+        },
+        "canonical": "{permalink}",
+        "robots": "index,follow",
+        "schema": "CollectionPage",
+        "jsonld": true
+      },
+      {
+        "page": "archive",
+        "title": "{archive_title} — {site_name}",
+        "description": "Magazine lifestyle: moda, benessere, viaggi, food e tendenze.",
+        "openGraph": {
+          "type": "website",
+          "image": "assets/images/placeholders/social-default.png"
+        },
+        "twitter": {
+          "card": "summary_large_image"
+        },
+        "canonical": "{permalink}",
+        "robots": "index,follow",
+        "schema": "CollectionPage",
+        "jsonld": true
+      },
+      {
+        "page": "page",
+        "title": "{page_title} — {site_name}",
+        "description": "Magazine lifestyle: moda, benessere, viaggi, food e tendenze.",
+        "openGraph": {
+          "type": "website",
+          "image": "assets/images/placeholders/social-default.png"
+        },
+        "twitter": {
+          "card": "summary_large_image"
+        },
+        "canonical": "{permalink}",
+        "robots": "index,follow",
+        "schema": "WebPage",
+        "jsonld": true
+      }
+    ]
+  },
+  "accessibility": {
+    "standard": "WCAG 2.2 AA",
+    "landmarks": ["banner", "navigation", "main", "complementary", "contentinfo"],
+    "ariaRoles": {
+      "header": "banner",
+      "nav": "navigation",
+      "main": "main",
+      "sidebar": "complementary",
+      "footer": "contentinfo"
+    },
+    "keyboard": [
+      "All interactive elements are reachable and operable by keyboard.",
+      "Visible skip-link to main content.",
+      "Logical tab order following the document flow."
+    ],
+    "focus": [
+      "Never remove focus outlines; provide a visible focus style.",
+      "Trap focus within modals and restore it on close.",
+      "Move focus to newly revealed content (e.g. live regions)."
+    ],
+    "contrast": [
+      {
+        "pair": "text-on-background",
+        "ratio": 18.88,
+        "requiredRatio": 4.5,
+        "passes": true,
+        "passesAA": true,
+        "passesAALarge": true
+      },
+      {
+        "pair": "primary-on-background",
+        "ratio": 3.51,
+        "requiredRatio": 3,
+        "passes": true,
+        "passesAA": false,
+        "passesAALarge": true
+      },
+      {
+        "pair": "background-on-primary",
+        "ratio": 3.51,
+        "requiredRatio": 3,
+        "passes": true,
+        "passesAA": false,
+        "passesAALarge": true
+      }
+    ],
+    "contrastPasses": true
+  },
+  "webVitals": {
+    "budgets": {
+      "lcpMs": 2500,
+      "cls": 0.1,
+      "inpMs": 200
+    },
+    "techniques": {
+      "lazyLoading": [
+        "Below-the-fold images use loading=\"lazy\" and decoding=\"async\".",
+        "Iframes and embeds are lazy-mounted on interaction or viewport entry."
+      ],
+      "preload": [
+        "Preload the LCP hero image and the primary web font.",
+        "Preconnect to the ad and analytics origins."
+      ],
+      "prefetch": [
+        "Prefetch the most likely next article on hover/focus.",
+        "Use quicklink-style prefetch for in-viewport internal links."
+      ],
+      "responsiveImages": [
+        "Serve srcset/sizes with modern formats (AVIF/WebP) and explicit width/height.",
+        "Reserve media aspect-ratio boxes to protect CLS."
+      ]
+    }
+  },
+  "advertisement": {
+    "positions": [
+      {
+        "id": "header",
+        "label": "Header Leaderboard",
+        "sizes": ["970x250", "728x90"],
+        "viewport": "desktop",
+        "lazy": false,
+        "sticky": false
+      },
+      {
+        "id": "sidebar",
+        "label": "Sidebar MPU",
+        "sizes": ["300x250", "300x600"],
+        "viewport": "desktop",
+        "lazy": true,
+        "sticky": false
+      },
+      {
+        "id": "in-article",
+        "label": "In-Article",
+        "sizes": ["300x250", "728x90"],
+        "viewport": "all",
+        "lazy": true,
+        "sticky": false
+      },
+      {
+        "id": "footer",
+        "label": "Footer",
+        "sizes": ["728x90", "320x100"],
+        "viewport": "all",
+        "lazy": true,
+        "sticky": false
+      },
+      {
+        "id": "sticky",
+        "label": "Sticky Anchor",
+        "sizes": ["728x90"],
+        "viewport": "desktop",
+        "lazy": false,
+        "sticky": true
+      },
+      {
+        "id": "mobile",
+        "label": "Mobile Banner",
+        "sizes": ["320x50", "300x250"],
+        "viewport": "mobile",
+        "lazy": true,
+        "sticky": false
+      },
+      {
+        "id": "video",
+        "label": "Video / Outstream",
+        "sizes": ["640x360"],
+        "viewport": "all",
+        "lazy": true,
+        "sticky": false
+      }
+    ],
+    "policy": {
+      "lazyBelowFold": true,
+      "reserveSpace": true,
+      "limitPerView": 6
+    }
+  },
+  "performance": {
+    "cache": {
+      "html": "s-maxage=60, stale-while-revalidate=300",
+      "assets": "public, max-age=31536000, immutable",
+      "images": "public, max-age=2592000",
+      "strategy": "edge CDN + full-page cache with per-path purge on publish"
+    },
+    "assets": {
+      "fingerprint": true,
+      "compression": ["brotli", "gzip"]
+    },
+    "images": {
+      "formats": ["avif", "webp", "jpeg"],
+      "lazy": true,
+      "responsive": true
+    },
+    "javascript": {
+      "defer": true,
+      "module": true,
+      "splitVendors": true
+    },
+    "css": {
+      "minify": true,
+      "critical": true,
+      "criticalStrategy": "inline above-the-fold critical CSS, defer the rest"
+    }
+  }
+}

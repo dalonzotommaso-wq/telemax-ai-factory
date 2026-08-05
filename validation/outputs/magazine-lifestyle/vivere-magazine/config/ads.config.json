@@ -1,0 +1,16 @@
+{
+  "generatedBy": "Telemax AI Factory",
+  "generatorVersion": "0.1.0",
+  "slots": [
+    {
+      "id": "hero-banner",
+      "label": "Hero Banner",
+      "location": "leaderboard"
+    },
+    {
+      "id": "native-1",
+      "label": "Native In-Article",
+      "location": "in-article"
+    }
+  ]
+}

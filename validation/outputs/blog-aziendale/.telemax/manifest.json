@@ -1,0 +1,470 @@
+{
+  "generator": "wordpress-news",
+  "generatorVersion": "0.1.0",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "fileCount": 66,
+  "artifacts": [
+    {
+      "path": "gruppo-air-blog/.telemax/build-info.json",
+      "contentType": "text/plain",
+      "bytes": 113,
+      "sha256": "e4b2cc73c6f70f45dccc8bacace710954b930d7a1d202047eae99269a3e626c3",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/404.php",
+      "contentType": "application/x-php",
+      "bytes": 663,
+      "sha256": "a718b46d66a74b5a3e2ada0a91f9c96c0abf73012a1b0720b4bf64c0cdf93250",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/archive.php",
+      "contentType": "application/x-php",
+      "bytes": 692,
+      "sha256": "8c9a56af8874840e3480129f75dd0d13a3609cb2d22b1af6e178aad26337a653",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/css/main.css",
+      "contentType": "text/css",
+      "bytes": 742,
+      "sha256": "8c4c63f0b0598235541397142262813035d325bb622690f6fb529ae2b194998f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/css/tokens.css",
+      "contentType": "text/plain",
+      "bytes": 831,
+      "sha256": "9329a55f7db624645824a616e3fc209889576675d44e93e2ebfee80f76b69ed8",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/images/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/images/icons/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/images/logos/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/images/placeholders/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/assets/js/main.js",
+      "contentType": "text/javascript",
+      "bytes": 391,
+      "sha256": "756a9efd5a2f18091a3f0e5f61a899ccf33772b69c73ba777d213a73f7b38b9f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/author.php",
+      "contentType": "application/x-php",
+      "bytes": 880,
+      "sha256": "a359eb42576efdf3a9eb2a1b03a709c60b04c2abb4f24000342a2c911f327c18",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/category.php",
+      "contentType": "application/x-php",
+      "bytes": 703,
+      "sha256": "b6aa13e94f3115336835fd5c6f2e06913c95aa0757223305dee62427617f8429",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/accessibility.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1246,
+      "sha256": "4bde9ba582bfe6755027fd02260b04141365fde5e3faa4f2bc2c7059d454d7ca",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/ads.config.json",
+      "contentType": "application/json",
+      "bytes": 174,
+      "sha256": "f85c960f61b086e205cd0f801370b93151487fbc6bb24afe59bce0deb51188bc",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/advertising.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1470,
+      "sha256": "f706058c5b0f915ddd2906add2dadcec56a4b87e863f3452ab02ea78b93178e9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/components.json",
+      "contentType": "text/plain",
+      "bytes": 2597,
+      "sha256": "654929ef67b155eba0a4f607dbbdcc027e780a35ab4be73b8bca465069dfac12",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/design-tokens.json",
+      "contentType": "text/plain",
+      "bytes": 1647,
+      "sha256": "f0d2c3a863345a4a918bc8c1740fb9b258101fbd5a74a62253477ebe8c1ac363",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/layout.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 5935,
+      "sha256": "75391db1ce9a43328183a768c0e6a6260498a9ae1544353fc0c115108bd30e01",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/performance.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 692,
+      "sha256": "9661ba5d0b3be226def74da005089426f8d7c35774c416cea0d2027816a2b476",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/project.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 26699,
+      "sha256": "58992f924960277246ce67471997cd4b51fa644ab1ac441423225a8435493e3e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/seo.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 2642,
+      "sha256": "250ec3e5f54a188e3649409d03d235c6898838a66377670c6c679c0a85ee0118",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/sitemap.config.json",
+      "contentType": "application/json",
+      "bytes": 222,
+      "sha256": "42117e31e7fb316ac384b9cd4c236b22b8018926877ec049c1b986790994cad2",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/config/web-vitals.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 750,
+      "sha256": "65db5711d0ca896d613eafbc94710ef0f2458b585218edbf72b6b89c43776802",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/docs/BLUEPRINT.md",
+      "contentType": "text/plain",
+      "bytes": 597,
+      "sha256": "53d9ee19987c10d23cd31cd8fc423253636c76df690c259c27d2a8ae4ef7c6a7",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/docs/NAMING-CONVENTIONS.md",
+      "contentType": "text/plain",
+      "bytes": 847,
+      "sha256": "6f68c2b70e2ccadd6a1b34fd598ad49fdf409b5a8c839a6915f5f468babd136e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/docs/PROJECT.md",
+      "contentType": "text/markdown",
+      "bytes": 1167,
+      "sha256": "7d68ece05772f7cce9523a341ca6a17db5cddee861157a7dd38162e6bc64f6cd",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/footer.php",
+      "contentType": "application/x-php",
+      "bytes": 666,
+      "sha256": "26d07bf070a29ae241fb4c6bb989c1ab847ce43d2ebee72735c158961895ed81",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/front-page.php",
+      "contentType": "application/x-php",
+      "bytes": 588,
+      "sha256": "72ee1475beecdda843471076011c520580d7da8b854d147663c09499d15b043f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/functions.php",
+      "contentType": "application/x-php",
+      "bytes": 1266,
+      "sha256": "f1a424bb6737ca4fa60956ac9fd5957293b1a8295785a9b63aa7500a902746a1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/header.php",
+      "contentType": "application/x-php",
+      "bytes": 882,
+      "sha256": "4503ec3c4cd889ceb9e8813a6f5e82d72c34b9895b6e4c5779b08e65596f37d4",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/home.php",
+      "contentType": "application/x-php",
+      "bytes": 979,
+      "sha256": "9ffe891e038bb777b363e5773e5714089f2a366f2c67c61609af1f3d373dce9c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/inc/schema.php",
+      "contentType": "application/x-php",
+      "bytes": 570,
+      "sha256": "100356c462a76ed983037b6043bcc58cf0aa776fad507eefb4e38120d7a185d6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/inc/seo.php",
+      "contentType": "application/x-php",
+      "bytes": 683,
+      "sha256": "1afdba72686048bf58025ee70332a1db092410c744c75207f5d8a3b06a71d1eb",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/inc/sitemap.php",
+      "contentType": "application/x-php",
+      "bytes": 381,
+      "sha256": "638f6f263effb73d3bf58be0e5d04b092983a0d32265ece7049ac3771c810362",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/inc/widgets.php",
+      "contentType": "application/x-php",
+      "bytes": 557,
+      "sha256": "c96b09b304d3021432257e7bd4b0c3a402202833182a7f99b85c65d300ce2417",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/index.php",
+      "contentType": "application/x-php",
+      "bytes": 581,
+      "sha256": "9e1ea00fcd11f32323d09c6b1a4d4194c2919198632e551cac10e5cc49b91e1f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/manifest.webmanifest",
+      "contentType": "application/manifest+json",
+      "bytes": 500,
+      "sha256": "789747c827d31c7239dee27e5573bfc97f1ba3b6655f0ee5b1ba6cb7d341f5ad",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/page.php",
+      "contentType": "application/x-php",
+      "bytes": 555,
+      "sha256": "122c22679e032c71a1c5c8db18c60bef8eda106132eb4abb2643264fecdbbc45",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/README.md",
+      "contentType": "text/markdown",
+      "bytes": 594,
+      "sha256": "85effa0ac5abfa18fae073b451e64e411e7c5c431d20f9e51a9b1c06f1f4e3c8",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/robots.txt",
+      "contentType": "text/plain",
+      "bytes": 129,
+      "sha256": "b342368e706583a2e44021fb8f3e9911c2d552b7956c814c7b9187bcdbc4a435",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/screenshot.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 795,
+      "sha256": "ec73096a50c617ba3734decfdff3bff856344b0606c7ee43df3d5c0754108b3e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/search.php",
+      "contentType": "application/x-php",
+      "bytes": 976,
+      "sha256": "87a7aaf367adeb6ac67f87a6012fd4529a7a4883dc6e9f54cfe93bb44b90a2e7",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 364,
+      "sha256": "d8da516c0ce038c21de98c9f638fdbc576e52d4250050e87f1d1c14b58a419ed",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/single.php",
+      "contentType": "application/x-php",
+      "bytes": 735,
+      "sha256": "1f7675e56a39fcf4dbb6818b53b107cca281a17a8bb12baad70b69f5952db57f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/STRUCTURE.md",
+      "contentType": "text/markdown",
+      "bytes": 1722,
+      "sha256": "ef3be879927fe2ec8d7fdd80b035c0d47bfd35832a67ea462f8b449a55c4d7ed",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/style.css",
+      "contentType": "text/css",
+      "bytes": 853,
+      "sha256": "a0077124d136380c0b8acdee9d4be4bfc265c18efd01803c0f224e894d1e1672",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/ads/ad-in-article.php",
+      "contentType": "application/x-php",
+      "bytes": 361,
+      "sha256": "4f335c4b5ec108789034ab786b13ee1c1b6ccd13ca2b500e1dd9f3f5fa6e0319",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/ads/ad-leaderboard.php",
+      "contentType": "application/x-php",
+      "bytes": 365,
+      "sha256": "8efd23a7634ca912c58b652022a136849c7140fd3b94a1bc9f73f5fa5e3e224b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/ads/ad-sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 349,
+      "sha256": "27ab940f3bf0b5972e5a0d82a0eafecc192209f24a01ed21e264a665fca9d58f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/author-box.php",
+      "contentType": "application/x-php",
+      "bytes": 608,
+      "sha256": "ef4cdb9660c74f9e6a77bee3a424f26d7d0a37023021c612c219ccd02b3ffb89",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/banner-adv.php",
+      "contentType": "application/x-php",
+      "bytes": 469,
+      "sha256": "d7a1b157b6731169b37371a07b7f9fc91d10025b8aa5f60e54b1cff8357ea34d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/breadcrumb.php",
+      "contentType": "application/x-php",
+      "bytes": 486,
+      "sha256": "b3fc6e349a39fc387305c4399d2eae32c60c2762f4f682f7e3c633b835a5a598",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/breaking-news.php",
+      "contentType": "application/x-php",
+      "bytes": 450,
+      "sha256": "02424f287c1405d2f9681756f0a23e33c3dfea9df7240d92b68e852bf30a2cd7",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/card-news.php",
+      "contentType": "application/x-php",
+      "bytes": 617,
+      "sha256": "02d94d689456e4fab96de51e0bc1c82ca9ac11f62cc233df538264c989bc4aa9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/comments.php",
+      "contentType": "application/x-php",
+      "bytes": 426,
+      "sha256": "ccede59542cf550013d721d34565295dbfb2afde53093bcdb7a338630780c56d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/gallery.php",
+      "contentType": "application/x-php",
+      "bytes": 596,
+      "sha256": "2d14f17c953258f217fcad990c0dec28dc488c849b5a2b721765ef95122e2b87",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/hero.php",
+      "contentType": "application/x-php",
+      "bytes": 574,
+      "sha256": "adb4bb2f27018dec83a304003bc0f01b3c2914094497edbaecb5ac96403f6728",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/live-banner.php",
+      "contentType": "application/x-php",
+      "bytes": 441,
+      "sha256": "f4132d6d42bb6009037375ab3771f7db9becf0a14d7af61deafe3b6a0ad7273e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/newsletter.php",
+      "contentType": "application/x-php",
+      "bytes": 451,
+      "sha256": "b2437aa5ce9098011d3ae672943f67147697bf05b9179c1a1888e9d78b8c08d6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/related-articles.php",
+      "contentType": "application/x-php",
+      "bytes": 607,
+      "sha256": "c9ec7a0c85c2965e31b42038f40ab3390382f892fab088567117fac44180b1f0",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/social-share.php",
+      "contentType": "application/x-php",
+      "bytes": 445,
+      "sha256": "08e3b13cea8c72c88136f6976e1a4b8084eb3f51a7f8581ba2f179fb3883befa",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/components/video-block.php",
+      "contentType": "application/x-php",
+      "bytes": 626,
+      "sha256": "cb75439a785f92adb14343fb0a74653a2220ca041cd6506981337bcd5d78566a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/navigation.php",
+      "contentType": "application/x-php",
+      "bytes": 545,
+      "sha256": "f3593982b30cbf600b4c33e9c58fd58153bab757da8313046aef48fd6ffc481f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/schema/newsarticle.php",
+      "contentType": "application/x-php",
+      "bytes": 669,
+      "sha256": "65a562a5f50753f74519cfdad6dcd0588ad13052b0ecc14599b49190148b4f05",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/template-parts/seo/meta-tags.php",
+      "contentType": "application/x-php",
+      "bytes": 643,
+      "sha256": "ccc59865638c8775455b8c1eebb7243a6247c8f064ef004b3c9c17576ab30c42",
+      "version": "0.1.0"
+    },
+    {
+      "path": "gruppo-air-blog/theme.json",
+      "contentType": "application/json",
+      "bytes": 443,
+      "sha256": "974eb7aba3d9719c9664288ed3898545e55c758fb8a7f2118314c2d62fc2db58",
+      "version": "0.1.0"
+    }
+  ]
+}

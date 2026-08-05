@@ -1,0 +1,16 @@
+{
+  "siteName": "Gruppo AIR Blog",
+  "siteDescription": "Blog aziendale del Gruppo AIR: novità, casi studio, cultura d'impresa e comunicati.",
+  "language": "it_IT",
+  "siteUrl": "https://blog.gruppoair.example",
+  "author": "Corporate Communication",
+  "primaryColor": "#0057B8",
+  "secondaryColor": "#3C3C3C",
+  "categories": ["Novità", "Casi Studio", "Cultura d'Impresa", "Comunicati"],
+  "menu": [
+    { "label": "Home", "path": "/" },
+    { "label": "Novità", "path": "/category/novita" },
+    { "label": "Casi Studio", "path": "/category/casi-studio" }
+  ],
+  "adSlots": [{ "id": "footer-cta", "label": "Footer CTA", "location": "sidebar" }]
+}

@@ -1,0 +1,470 @@
+{
+  "generator": "wordpress-news",
+  "generatorVersion": "0.1.0",
+  "generatedAt": "2026-08-01T12:00:00.000Z",
+  "fileCount": 66,
+  "artifacts": [
+    {
+      "path": "il-corriere-della-sera-nuovo/.telemax/build-info.json",
+      "contentType": "text/plain",
+      "bytes": 126,
+      "sha256": "336f748e6512014350e6cb05d8bdda5660f3fe969adf1d89a46d406a26738db5",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/404.php",
+      "contentType": "application/x-php",
+      "bytes": 676,
+      "sha256": "110cb5d6b9973f47cf866d7c3de8ee3fcb8c4f8c8a1f48dd0fb8bdb25079ff0e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/archive.php",
+      "contentType": "application/x-php",
+      "bytes": 705,
+      "sha256": "4d12e6d169cc6481d0449ac5e89495b48d02d33e4fac0084a9eda3a828fad5fc",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/css/main.css",
+      "contentType": "text/css",
+      "bytes": 755,
+      "sha256": "6d6a2544302358fd670d6e20ee8c04f5fea721489a31fe0882036351a71a06d9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/css/tokens.css",
+      "contentType": "text/plain",
+      "bytes": 831,
+      "sha256": "3550a82202f1efc7a70588db615168b76b009087848d437e1e6d4c8e9f8c3ace",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/images/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/images/icons/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/images/logos/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/images/placeholders/.gitkeep",
+      "contentType": "text/plain",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/assets/js/main.js",
+      "contentType": "text/javascript",
+      "bytes": 404,
+      "sha256": "9f5de5ca02eedb4aa922a10e13f9002b96248da48cba5e169f98bf0524245638",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/author.php",
+      "contentType": "application/x-php",
+      "bytes": 893,
+      "sha256": "c5f445595c0544876e9f2ae0126d47bc4441c4db3e555f0f69587b307fb8093f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/category.php",
+      "contentType": "application/x-php",
+      "bytes": 716,
+      "sha256": "4b5b752945d7ec3cad0dc9d668c80c5e60e0dd87bae39a350f65033d9ae20957",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/accessibility.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1248,
+      "sha256": "4bac764d3990bdb1fdd2b0518a97c6f98d8a7236510a443cd75e40796e7fa074",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/ads.config.json",
+      "contentType": "application/json",
+      "bytes": 270,
+      "sha256": "983fbb95f8c8c463412ef71d07cd8c506ab41376fad671b1060c65b88d1ec75c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/advertising.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 1470,
+      "sha256": "f706058c5b0f915ddd2906add2dadcec56a4b87e863f3452ab02ea78b93178e9",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/components.json",
+      "contentType": "text/plain",
+      "bytes": 2597,
+      "sha256": "654929ef67b155eba0a4f607dbbdcc027e780a35ab4be73b8bca465069dfac12",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/design-tokens.json",
+      "contentType": "text/plain",
+      "bytes": 1647,
+      "sha256": "fa7cc4fb2775f4c4bf9785eec35186d6a7c194edeed55395b643bd329d7b2b26",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/layout.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 6225,
+      "sha256": "e41829784e2143aeaf9fa930208b47eae3723d87fa53691ffe4f5e24eca9ea62",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/performance.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 692,
+      "sha256": "9661ba5d0b3be226def74da005089426f8d7c35774c416cea0d2027816a2b476",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/project.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 27032,
+      "sha256": "34c1b9884183c9af2de52396e4889b791d6b43dcf14f463b469157e25bbe87a4",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/seo.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 2650,
+      "sha256": "04bc4e31fca8a619ab7329a1391856396a7bc512ccd4975fca8533fd285ccd1c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/sitemap.config.json",
+      "contentType": "application/json",
+      "bytes": 235,
+      "sha256": "934b8fdd6d2c481075247ec745c8fbd20164b0d331af6a75258bb5c5d0d5653b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/config/web-vitals.blueprint.json",
+      "contentType": "text/plain",
+      "bytes": 750,
+      "sha256": "65db5711d0ca896d613eafbc94710ef0f2458b585218edbf72b6b89c43776802",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/docs/BLUEPRINT.md",
+      "contentType": "text/plain",
+      "bytes": 610,
+      "sha256": "fcf35aa4276fee8d27deb03e549b94e0ca2c5e5b30de2d5e1b092d5cb20ec89c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/docs/NAMING-CONVENTIONS.md",
+      "contentType": "text/plain",
+      "bytes": 847,
+      "sha256": "6f68c2b70e2ccadd6a1b34fd598ad49fdf409b5a8c839a6915f5f468babd136e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/docs/PROJECT.md",
+      "contentType": "text/markdown",
+      "bytes": 1180,
+      "sha256": "52a847dbc538d5f0bf699896aa94c34e4623c1691f9762ed8c66f3521f38aa93",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/footer.php",
+      "contentType": "application/x-php",
+      "bytes": 692,
+      "sha256": "424c6892751288348e58cb2459152ba9a0a6c1f559e7e82db37dd1350dfea553",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/front-page.php",
+      "contentType": "application/x-php",
+      "bytes": 601,
+      "sha256": "a2b077a8170c9f834591767805c6111c8cc9e4b63944270cd1d0dab8af06ff75",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/functions.php",
+      "contentType": "application/x-php",
+      "bytes": 1305,
+      "sha256": "dd630486865daa8e3364cf5eb1def6efc5a51911dd38b8a1dce4f8dd5b656b49",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/header.php",
+      "contentType": "application/x-php",
+      "bytes": 916,
+      "sha256": "8a29084d729b98100ff424d78947ae05d6f1d133c5a1f7e6f8c087d6360d1ad8",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/home.php",
+      "contentType": "application/x-php",
+      "bytes": 992,
+      "sha256": "e4f61237673a4c23528e54801875a33fd023148a9e23f74b0798d1ca2cd2c7cb",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/inc/schema.php",
+      "contentType": "application/x-php",
+      "bytes": 605,
+      "sha256": "97a958c4040d98eab57e5e855251b62ea4984e42a3ac8f072d3677cc3d68f17c",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/inc/seo.php",
+      "contentType": "application/x-php",
+      "bytes": 708,
+      "sha256": "e21fd7b3b5930816241f89398b129e5abcb45e933ec231720751644c50c0e813",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/inc/sitemap.php",
+      "contentType": "application/x-php",
+      "bytes": 394,
+      "sha256": "85c89bea72b9c9cc30c19428de4fd6453c117b60f2d5cc6f77e341041b7d65a1",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/inc/widgets.php",
+      "contentType": "application/x-php",
+      "bytes": 570,
+      "sha256": "d8e0f9f3515dc5aba88675e7f60f15dc503756677ccee6661f2ac153beee91ca",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/index.php",
+      "contentType": "application/x-php",
+      "bytes": 594,
+      "sha256": "780945bbec222b4c2039ac6f42c8bdf7fcdb105996eaf2eb5350acdb7dbd863f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/manifest.webmanifest",
+      "contentType": "application/manifest+json",
+      "bytes": 525,
+      "sha256": "17d3329df812fe4132565372ea9b4950e6ac3537f392929aff61706ab54bb5bc",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/page.php",
+      "contentType": "application/x-php",
+      "bytes": 568,
+      "sha256": "970a2b4edc56d774f85d4aa70564644f64b6c151ed95515cc1cb77c193fa50ba",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/README.md",
+      "contentType": "text/markdown",
+      "bytes": 634,
+      "sha256": "24b59e059163d4711cb7b2c5d3eb477b924a8cd41399ad3351be8e714e03b043",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/robots.txt",
+      "contentType": "text/plain",
+      "bytes": 151,
+      "sha256": "407822522199f1fd143f03c9d099da27ad1c65c13ad7acbd32eff54dad1ecdec",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/screenshot.svg",
+      "contentType": "image/svg+xml",
+      "bytes": 821,
+      "sha256": "fda347a5ea7cbf22fdc652e4a31772120df0e7486fe6dfc7a4bef7c1cd29fd1d",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/search.php",
+      "contentType": "application/x-php",
+      "bytes": 1002,
+      "sha256": "d7435a2299c74fd8cf1ba29e786e7670edbf5ce36f92ef242f1facae3cbc31a5",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 377,
+      "sha256": "8f90aa5f7eec95e83a1e485a45980dcca59feaf2e1022f5a4f96ffc6ae100392",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/single.php",
+      "contentType": "application/x-php",
+      "bytes": 748,
+      "sha256": "5d3329b1ea030b0701078233ec68e9b0e56ce1791e244eb8c8648eba331f8e8a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/STRUCTURE.md",
+      "contentType": "text/markdown",
+      "bytes": 1748,
+      "sha256": "c71167b0621d1cbc9ef52e8fcc00ca3b4e91bf42cac1b28dc882ec406b0cbd6f",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/style.css",
+      "contentType": "text/css",
+      "bytes": 883,
+      "sha256": "74762711adca34a2a9671ed398e026e0bea3b00772e575f8aa1e5a158e77ae89",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/ads/ad-in-article.php",
+      "contentType": "application/x-php",
+      "bytes": 374,
+      "sha256": "a8d1259a5ee59ea2338d8a3520471ab13efa2b2fdc3daf71a44db517b37d9c78",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/ads/ad-leaderboard.php",
+      "contentType": "application/x-php",
+      "bytes": 378,
+      "sha256": "e73840016eb679a235aaa3dc146ee3d10394ba03ddf88ce653c845af2595ad5e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/ads/ad-sidebar.php",
+      "contentType": "application/x-php",
+      "bytes": 362,
+      "sha256": "5b9965c7401a7d503699e6f9d78582d7340984d0e26b8cd83bc254ea57ae19ee",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/author-box.php",
+      "contentType": "application/x-php",
+      "bytes": 621,
+      "sha256": "bc26b14b5f5172c6fa80cddda09d99e77c9fc344c64f252ec5d727b437411997",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/banner-adv.php",
+      "contentType": "application/x-php",
+      "bytes": 482,
+      "sha256": "2fb4a940dda3739ffc3b4c3dd7f60aa00b4a83e62831c4e4e97811536f6a5963",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/breadcrumb.php",
+      "contentType": "application/x-php",
+      "bytes": 499,
+      "sha256": "a7620bbb9fff8f0428320e63d96bbf9bd65ed8f0a196c97a01c514add090db59",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/breaking-news.php",
+      "contentType": "application/x-php",
+      "bytes": 463,
+      "sha256": "fc4be604ee468454a29c173ff0f228eddb34b5d6e617e1d1c1a054b470fb110b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/card-news.php",
+      "contentType": "application/x-php",
+      "bytes": 630,
+      "sha256": "9b609ddaa51e989ca6042d8329aa2c455ca0f48e8d2e49ef903b4f20d76cd47a",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/comments.php",
+      "contentType": "application/x-php",
+      "bytes": 439,
+      "sha256": "e36280eadbd00aaf067810d7a7de5ae719c3332543452e06cd47ab9e17d6bc5b",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/gallery.php",
+      "contentType": "application/x-php",
+      "bytes": 609,
+      "sha256": "1b13e8753f62acfa83a7a990860cdb74413fa44f2c791a4675ce59aab07a7616",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/hero.php",
+      "contentType": "application/x-php",
+      "bytes": 587,
+      "sha256": "c1334cd81fc5f0936d16a77c0588c985353a1569a320150b8564b68fe7ac0520",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/live-banner.php",
+      "contentType": "application/x-php",
+      "bytes": 454,
+      "sha256": "96f3e8e49c85c97c49b1af4e2566c21ace2467de3cc795c519d94e80b5f32e06",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/newsletter.php",
+      "contentType": "application/x-php",
+      "bytes": 464,
+      "sha256": "ef711fdf3df8aa6b3df87f62cbc8e2890a2c03ca00114ea023b9e2a46f18697e",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/related-articles.php",
+      "contentType": "application/x-php",
+      "bytes": 620,
+      "sha256": "a6b728c689ae08b72dcdaf6c1279e4510859335795787cb204cecd549da0bfde",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/social-share.php",
+      "contentType": "application/x-php",
+      "bytes": 458,
+      "sha256": "2e35103f853d929f48706b3e2749de139c203782eb914d5c0d56a36ff36a98ae",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/components/video-block.php",
+      "contentType": "application/x-php",
+      "bytes": 639,
+      "sha256": "49c1b088423bd6285bb7dbd6f6462700eb820c9b0c1d07818c912bbfb04c3c46",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/navigation.php",
+      "contentType": "application/x-php",
+      "bytes": 634,
+      "sha256": "ef609cbafb4e079c0dcb6bbd04e79d0bac37ee7a18f1f0ffd53d1efb9b42ca68",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/schema/newsarticle.php",
+      "contentType": "application/x-php",
+      "bytes": 695,
+      "sha256": "f11ccd272a8e21951ba34930b3094ac9eb96b2f6a819abd92436ab9675c41d20",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/template-parts/seo/meta-tags.php",
+      "contentType": "application/x-php",
+      "bytes": 694,
+      "sha256": "a5ec0778ba517a4cb31f6ed5a83055fe9203ea1c61105bda72f192b36368d8c6",
+      "version": "0.1.0"
+    },
+    {
+      "path": "il-corriere-della-sera-nuovo/theme.json",
+      "contentType": "application/json",
+      "bytes": 443,
+      "sha256": "a13551b7e982d6f53f7e84ddeefc9994c48f20ee62a8f0c9d7a600a7916c041f",
+      "version": "0.1.0"
+    }
+  ]
+}

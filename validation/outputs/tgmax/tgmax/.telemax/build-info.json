@@ -1,0 +1,8 @@
+{
+  "build": {
+    "generator": "wordpress-news",
+    "generatorVersion": "0.1.0",
+    "site": "TGMAX",
+    "target": "wordpress"
+  }
+}

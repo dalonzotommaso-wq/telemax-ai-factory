@@ -1,0 +1,37 @@
+/*
+Theme Name: Sprint Sport
+Theme URI: https://www.sprintsport.example
+Author: Sprint Sport Desk
+Description: Portale sportivo: calcio, motori, basket, risultati live e calciomercato.
+Version: 0.1.0
+Requires at least: 6.4
+Requires PHP: 8.1
+License: GPL-2.0-or-later
+Text Domain: sprint-sport
+Tags: news, magazine, blog
+Generated-By: Telemax AI Factory (project scaffold — not production code)
+*/
+
+:root {
+  --color-primary: #00a651;
+  --color-secondary: #111111;
+  --container: 1200px;
+}
+
+/* Scaffold styles only — extend during theme completion. */
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #111;
+}
+.site-container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+.site-header {
+  border-bottom: 3px solid var(--color-primary);
+}
+.article-title {
+  color: var(--color-secondary);
+}

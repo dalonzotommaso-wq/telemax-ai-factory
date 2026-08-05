@@ -1,4 +1,5 @@
 import { StatsCards } from "@/components/dashboard/stats-cards";
+import { RecentProjects } from "@/components/dashboard/recent-projects";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { API_URL } from "@/lib/api";
 
@@ -14,12 +15,18 @@ export default function DashboardPage() {
 
       <StatsCards />
 
+      <RecentProjects />
+
       <Card>
         <CardHeader>
           <CardTitle>Platform status</CardTitle>
           <CardDescription>
-            The stats above are read live from the API/database. The badge in the top bar performs a
-            live <code>GET /health</code> and shows ONLINE or OFFLINE.
+            The cards above are read live from <code>GET /system/status</code> and the projects list
+            from <code>GET /projects</code> — no static data. See the{" "}
+            <a className="underline" href="/system">
+              System
+            </a>{" "}
+            page for the full breakdown.
           </CardDescription>
         </CardHeader>
         <CardContent>

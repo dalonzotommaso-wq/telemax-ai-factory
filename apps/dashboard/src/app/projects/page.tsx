@@ -1,17 +1,27 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import { Trash2, Pencil, Plus, RefreshCw } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Trash2, Pencil, Plus, RefreshCw, Copy, Archive, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select } from "@/components/ui/select";
 import { StatusBadge } from "@/components/projects/status-badge";
-import { deleteProject, listProjects, type Project } from "@/lib/api";
+import {
+  archiveProject,
+  deleteProject,
+  duplicateProject,
+  generateProject,
+  listProjects,
+  type Project,
+} from "@/lib/api";
 import { TYPE_LABELS, filterAndSortProjects, type SortField } from "@/lib/projects";
 
 export default function ProjectsPage() {
+  const router = useRouter();
   const [projects, setProjects] = useState<Project[]>([]);
+  const [generatingId, setGeneratingId] = useState<number | null>(null);
   const [q, setQ] = useState("");
   const [sort, setSort] = useState<SortField>("createdAt");
   const [order, setOrder] = useState<"asc" | "desc">("desc");
@@ -43,6 +53,26 @@ export default function ProjectsPage() {
     if (!confirm("Delete this project?")) return;
     await deleteProject(id);
     await load();
+  };
+
+  const onArchive = async (id: number): Promise<void> => {
+    await archiveProject(id);
+    await load();
+  };
+
+  const onDuplicate = async (id: number): Promise<void> => {
+    await duplicateProject(id);
+    await load();
+  };
+
+  const onGenerate = async (id: number): Promise<void> => {
+    setGeneratingId(id);
+    try {
+      await generateProject(id);
+      router.push(`/projects/${id}/generation`);
+    } finally {
+      setGeneratingId(null);
+    }
   };
 
   return (
@@ -110,9 +140,10 @@ export default function ProjectsPage() {
               <thead className="border-b border-border text-left text-muted-foreground">
                 <tr>
                   <th className="px-4 py-3 font-medium">Name</th>
+                  <th className="px-4 py-3 font-medium">Client</th>
                   <th className="px-4 py-3 font-medium">Type</th>
+                  <th className="px-4 py-3 font-medium">Generator</th>
                   <th className="px-4 py-3 font-medium">Status</th>
-                  <th className="px-4 py-3 font-medium">Version</th>
                   <th className="px-4 py-3" />
                 </tr>
               </thead>
@@ -120,18 +151,43 @@ export default function ProjectsPage() {
                 {visible.map((p) => (
                   <tr key={p.id} className="border-b border-border last:border-0">
                     <td className="px-4 py-3 font-medium">{p.name}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{p.client || "—"}</td>
                     <td className="px-4 py-3 text-muted-foreground">{TYPE_LABELS[p.type]}</td>
+                    <td className="px-4 py-3 text-muted-foreground">{p.generator || "—"}</td>
                     <td className="px-4 py-3">
                       <StatusBadge status={p.status} />
                     </td>
-                    <td className="px-4 py-3 text-muted-foreground">{p.version}</td>
                     <td className="px-4 py-3">
                       <div className="flex justify-end gap-1">
+                        <Button
+                          size="sm"
+                          disabled={generatingId === p.id}
+                          onClick={() => void onGenerate(p.id)}
+                        >
+                          <Sparkles className="h-4 w-4" />
+                          {generatingId === p.id ? "Generating…" : "Genera"}
+                        </Button>
                         <Link href={`/projects/${p.id}/edit`}>
                           <Button variant="ghost" size="icon" aria-label="Edit">
                             <Pencil className="h-4 w-4" />
                           </Button>
                         </Link>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          aria-label="Duplicate"
+                          onClick={() => void onDuplicate(p.id)}
+                        >
+                          <Copy className="h-4 w-4" />
+                        </Button>
+                        <Button
+                          variant="ghost"
+                          size="icon"
+                          aria-label="Archive"
+                          onClick={() => void onArchive(p.id)}
+                        >
+                          <Archive className="h-4 w-4" />
+                        </Button>
                         <Button
                           variant="ghost"
                           size="icon"

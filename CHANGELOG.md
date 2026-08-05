@@ -7,13 +7,43 @@ are documented here. Per-package changes live in each package's own
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.0] - Unreleased
+## [0.2.0] - 2026-08-04
 
-> **Repository baseline (2026-08-03).** All completed work through SPRINT-012 —
-> foundation, engines, the WordPress generator and the platform apps — has been
-> committed to `main` as a sequence of logical Conventional Commits and tagged
-> `v0.1.0-foundation`. This tag marks the first fully version-controlled snapshot
-> of the codebase; it is a foundation checkpoint, not a published release.
+Second milestone. The dashboard becomes the real control plane and Projects become
+operational end-to-end: create → workspace → generate. No new packages; the existing
+framework is wired into the platform apps.
+
+### Added
+
+- **Platform System integration.** `RepositoryService` performs a real scan of the
+  monorepo (packages, apps, generators, knowledge packs, workflow, AI providers, tests,
+  build artifacts, git) exposed via `GET /system/status | /system/packages | /system/apps |
+  /system/git`. New Dashboard System page and live Home stat cards; all previously
+  hard-coded statistics removed.
+- **Project Manager Engine v1.** The full Project model (uuid, slug, name, description,
+  client, category, type, stack, generator, workflow, knowledge pack, AI provider, version,
+  status, workspace, timestamps). On creation each project persists to SQLite **and**
+  materialises a real workspace on disk (`workspace/<slug>/{docs,assets,prompts,output,logs,
+  uploads,build}` + `project.json`). Six-step "New project" wizard populated live from the
+  repository scan. New endpoints `POST /projects/:id/archive` and
+  `POST /projects/:id/duplicate`. Recent projects on the Home page.
+- **Project Generation Engine.** `GenerationService` connects the Project Manager to the
+  existing Generator Engine — the "Generate" button really produces a project into
+  `workspace/<slug>/output/`. Phased run (preparation → knowledge → workflow → AI →
+  generator → writing → completed) with per-file records (name, path, size, sha256,
+  timestamp). Endpoints `POST /projects/:id/generate`, `GET /projects/:id/generation`,
+  `GET /projects/:id/logs`; a Generation Details page with a live timeline.
+
+### Changed
+
+- Repository hygiene: ignore build output, runtime workspaces and generated artifacts.
+
+## [0.1.0] - 2026-08-03
+
+> **Repository baseline.** All completed work through SPRINT-012 — foundation, engines, the
+> WordPress generator and the platform apps — was committed to `main` as a sequence of
+> logical Conventional Commits and tagged `v0.1.0-foundation`. This tag marks the first
+> fully version-controlled snapshot of the codebase; it is a foundation checkpoint.
 
 ### Added
 

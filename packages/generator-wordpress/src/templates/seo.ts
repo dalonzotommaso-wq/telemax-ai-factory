@@ -33,11 +33,12 @@ add_action( 'wp_head', function () {
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 ?>
 <meta property="og:site_name" content="{{siteName}}" />
+<meta property="og:title" content="{{seoTitle}}" />
 <meta property="og:type" content="website" />
 <meta property="og:description" content="{{metaDescription}}" />
 <meta property="og:locale" content="{{language}}" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="{{siteName}}" />
+<meta name="twitter:title" content="{{seoTitle}}" />
 `,
   },
   {

@@ -8,6 +8,9 @@ export const GENERATOR_VERSION = "0.1.0";
 /** Names of every variable referenced by the templates (used for validation). */
 export const KNOWN_VARIABLES: readonly string[] = [
   "siteName",
+  "siteTitle",
+  "tagline",
+  "seoTitle",
   "siteDescription",
   "language",
   "themeSlug",

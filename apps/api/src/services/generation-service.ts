@@ -12,13 +12,15 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSy
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 import { deflateRawSync } from "node:zlib";
-import { isErr } from "@telemax/core";
+import { isErr, ServiceContainer } from "@telemax/core";
+import { registerAIOrchestratorFromEnv } from "@telemax/ai";
 import { GeneratorEngine } from "@telemax/generator-engine";
 import { WorkflowEngine } from "@telemax/workflow";
 import {
   assembleVariables,
   buildPromptEngine,
   registerWordPressNews,
+  resilientAiRunner,
   resolveWordPressConfig,
   seedKnowledge,
   validateProject,
@@ -187,7 +189,10 @@ export class GenerationService {
       const resolved = resolveWordPressConfig(config);
 
       // ---- Knowledge ----
-      log("knowledge", `Seeding knowledge base (${manifest.knowledgePack || "@telemax/knowledge"})`);
+      log(
+        "knowledge",
+        `Seeding knowledge base (${manifest.knowledgePack || "@telemax/knowledge"})`,
+      );
       const knowledge = await seedKnowledge();
 
       // ---- Workflow ----
@@ -195,13 +200,17 @@ export class GenerationService {
       const workflow = new WorkflowEngine();
 
       // ---- AI / Prompt ----
-      log("ai", `Building prompt engine and AI provider (${manifest.aiProvider || "stub"})`);
       const prompt = await buildPromptEngine();
+      const ai = registerAIOrchestratorFromEnv(new ServiceContainer());
+      log("ai", `AI provider: ${ai.providerId}`);
 
       // ---- Generator Engine ----
       log("generator", "Registering generator and producing artifacts");
-      const generator = new GeneratorEngine();
-      const registered = registerWordPressNews({ generator, workflow, prompt, knowledge }, resolved);
+      const generator = new GeneratorEngine({ ai: resilientAiRunner(ai.orchestrator) });
+      const registered = await registerWordPressNews(
+        { generator, workflow, prompt, knowledge },
+        resolved,
+      );
       if (isErr(registered)) throw new Error(registered.error.message);
       const generatedAt = new Date().toISOString();
       const produced = await generator.generate(
@@ -209,6 +218,15 @@ export class GenerationService {
         assembleVariables(resolved, new Date().getFullYear(), generatedAt),
       );
       if (isErr(produced)) throw new Error(produced.error.message);
+
+      // Content Plan observability: AI vs deterministic fallback + validation.
+      const envelope = produced.value.variables["contentPlanEnvelope"] as
+        | { readonly source?: string; readonly validation?: string }
+        | undefined;
+      const source = envelope?.source === "ai" ? "generated" : "fallback";
+      const cpValidation = envelope?.validation === "failed" ? "failed" : "passed";
+      log("ai", `Content Plan: ${source}`);
+      log("ai", `Validation: ${cpValidation}`);
 
       // ---- Writing output ----
       const artifacts = produced.value.artifacts.list();

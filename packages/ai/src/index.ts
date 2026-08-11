@@ -1,10 +1,10 @@
 /**
- * Public API of `@telemax/ai` — the provider-agnostic AI Orchestrator.
+ * Public API of @telemax/ai - the provider-agnostic AI Orchestrator.
  *
  * Coordinates the Knowledge and Prompt engines, provider/model registries,
  * requests/responses, conversations, pipelines, resilience, cost and telemetry.
  * Infrastructure only: no HTTP, no API keys, no external calls. Depends only on
- * `@telemax/core`, `@telemax/knowledge` and `@telemax/prompt-engine`.
+ * @telemax/core, @telemax/knowledge and @telemax/prompt-engine.
  */
 
 // Types
@@ -135,6 +135,7 @@ export type { AIOrchestratorDeps } from "./orchestrator.js";
 // Dependency injection
 export {
   registerAIOrchestrator,
+  registerAIOrchestratorFromEnv,
   AI_CONFIG,
   AI_EVENTS,
   AI_PROVIDER_REGISTRY,
@@ -142,3 +143,4 @@ export {
   AI_COST_TRACKER,
   AI_ORCHESTRATOR,
 } from "./di.js";
+export type { RegisteredOrchestrator } from "./di.js";

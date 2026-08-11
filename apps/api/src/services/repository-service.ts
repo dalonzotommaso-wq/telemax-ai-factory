@@ -1,7 +1,7 @@
-// -----------------------------------------------------------------------------
+﻿// -----------------------------------------------------------------------------
 // RepositoryService
 //
-// Performs a REAL scan of the monorepo — no static/fake data. It reads:
+// Performs a REAL scan of the monorepo â€” no static/fake data. It reads:
 //   - pnpm-workspace.yaml   (workspace globs)
 //   - <workspace>/package.json (name, version, deps, public API entry)
 //   - turbo.json            (task pipeline)
@@ -239,7 +239,7 @@ export class RepositoryService {
     const pkg = safeReadJson<PackageJson>(join(dir, "package.json"));
     if (!pkg?.name) return null;
     const deps = pkg.dependencies ?? {};
-    const rel = dir.slice(this.root.length + 1) || basename(dir);
+    const rel = (dir.slice(this.root.length + 1) || basename(dir)).replace(/\\/g, "/");
     const kind: "package" | "app" = rel.startsWith("apps/") ? "app" : "package";
     const built =
       existsSync(join(dir, "dist")) || (kind === "app" && existsSync(join(dir, ".next")));
@@ -325,7 +325,7 @@ export class RepositoryService {
     for (const dir of this.workspaceDirs()) {
       const res = countTestsInDir(join(dir, "src"));
       if (res.files > 0) {
-        const rel = dir.slice(this.root.length + 1) || basename(dir);
+        const rel = (dir.slice(this.root.length + 1) || basename(dir)).replace(/\\/g, "/");
         byWorkspace[rel] = res;
         files += res.files;
         cases += res.cases;
@@ -351,7 +351,11 @@ export class RepositoryService {
 
   private git(args: string[]): string | null {
     try {
-      return execFileSync("git", args, { cwd: this.root, encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }).trim();
+      return execFileSync("git", args, {
+        cwd: this.root,
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }).trim();
     } catch {
       return null;
     }
@@ -360,7 +364,8 @@ export class RepositoryService {
   private countChangesets(): number {
     const dir = join(this.root, ".changeset");
     if (!existsSync(dir)) return 0;
-    return readdirSync(dir).filter((f) => f.endsWith(".md") && f.toLowerCase() !== "readme.md").length;
+    return readdirSync(dir).filter((f) => f.endsWith(".md") && f.toLowerCase() !== "readme.md")
+      .length;
   }
 
   getGit(): GitInfo {

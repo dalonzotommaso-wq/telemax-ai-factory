@@ -3,11 +3,13 @@
  * produce the WordPress News project artifacts.
  */
 import { GeneratorEngine } from "@telemax/generator-engine";
-import type { GeneratorError, GeneratorResult } from "@telemax/generator-engine";
+import type { AIRunner, GeneratorError, GeneratorResult } from "@telemax/generator-engine";
 import { WorkflowEngine } from "@telemax/workflow";
-import { isErr, type Result } from "@telemax/core";
+import { ServiceContainer, isErr, type Result } from "@telemax/core";
+import { registerAIOrchestratorFromEnv } from "@telemax/ai";
 import { resolveWordPressConfig } from "./config.js";
 import { registerWordPressNews } from "./di.js";
+import { resilientAiRunner } from "./ai-meta.js";
 import { seedKnowledge } from "./knowledge.js";
 import { buildPromptEngine } from "./prompts.js";
 import { assembleVariables } from "./assemble.js";
@@ -20,6 +22,12 @@ import type { WordPressSiteConfig } from "./types.js";
 export interface GenerateOptions {
   readonly year?: number;
   readonly generatedAt?: string;
+  /**
+   * AI runner to drive the pipeline's AI step. Defaults to a deterministic,
+   * network-free StubProvider-backed runner. Tests inject their own; the app
+   * layer injects a runner wired to the real (env-based) Orchestrator.
+   */
+  readonly ai?: AIRunner;
 }
 
 /** Validate the config, wire the engines and generate the project artifacts. */
@@ -33,12 +41,22 @@ export async function generateWordPressNews(
   }
   const config = resolveWordPressConfig(input);
 
-  const generator = new GeneratorEngine();
+  // Default to a stub-only Orchestrator (env forced empty -> no network).
+  const ai =
+    options.ai ??
+    resilientAiRunner(
+      registerAIOrchestratorFromEnv(new ServiceContainer(), { env: {} }).orchestrator,
+    );
+
+  const generator = new GeneratorEngine({ ai });
   const workflow = new WorkflowEngine();
   const prompt = await buildPromptEngine();
   const knowledge = await seedKnowledge();
 
-  const registered = registerWordPressNews({ generator, workflow, prompt, knowledge }, config);
+  const registered = await registerWordPressNews(
+    { generator, workflow, prompt, knowledge },
+    config,
+  );
   if (isErr(registered)) {
     return registered;
   }

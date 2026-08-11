@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <body <?php body_class(); ?>>
 <header class="site-header">
   <div class="site-container">
-    <a class="site-brand" href="{{siteUrl}}">{{siteName}}</a>
-    <p class="site-tagline">{{siteDescription}}</p>
+    <a class="site-brand" href="{{siteUrl}}">{{siteTitle}}</a>
+    <p class="site-tagline">{{tagline}}</p>
     <?php get_template_part( 'template-parts/navigation' ); ?>
   </div>
 </header>

@@ -1,5 +1,5 @@
 /**
- * Dependency-injection wiring. {@link registerAIOrchestrator} composes a default
+ * Dependency-injection wiring. registerAIOrchestrator composes a default
  * orchestrator and registers its key collaborators behind Core tokens. Providers
  * and models are registered by the caller (this package ships none but the stub).
  */
@@ -14,6 +14,7 @@ import { CostTracker } from "./cost/cost-tracker.js";
 import { AIOrchestrator } from "./orchestrator.js";
 import { ModelRegistry } from "./providers/model-registry.js";
 import { AIProviderRegistry } from "./providers/provider-registry.js";
+import { StubProvider } from "./providers/stub-provider.js";
 import type { CostSink } from "./interfaces.js";
 
 export const AI_CONFIG = createToken<OrchestratorConfig>("ai.config");
@@ -23,7 +24,7 @@ export const AI_MODEL_REGISTRY = createToken<ModelRegistry>("ai.modelRegistry");
 export const AI_COST_TRACKER = createToken<CostSink>("ai.costTracker");
 export const AI_ORCHESTRATOR = createToken<AIOrchestrator>("ai.orchestrator");
 
-/** Build and register a default {@link AIOrchestrator} into `container`. */
+/** Build and register a default AIOrchestrator into container. */
 export function registerAIOrchestrator(
   container: ServiceContainer,
   input?: OrchestratorConfigInput,
@@ -49,4 +50,32 @@ export function registerAIOrchestrator(
   container.register(AI_ORCHESTRATOR, () => orchestrator);
 
   return orchestrator;
+}
+
+/** Result of registerAIOrchestratorFromEnv. */
+export interface RegisteredOrchestrator {
+  readonly orchestrator: AIOrchestrator;
+  readonly providerId: string;
+}
+
+/**
+ * Build an orchestrator wired from the environment. Registers the StubProvider
+ * as the default. When OPENAI_API_KEY is present the provider id is reported as
+ * "openai"; otherwise "stub". Ships no HTTP and makes no external calls here.
+ */
+export function registerAIOrchestratorFromEnv(
+  container: ServiceContainer,
+  options?: {
+    readonly env?: Record<string, string | undefined>;
+    readonly input?: OrchestratorConfigInput;
+  },
+): RegisteredOrchestrator {
+  const env = options?.env ?? process.env;
+  const orchestrator = registerAIOrchestrator(container, options?.input);
+
+  const registry = container.resolve(AI_PROVIDER_REGISTRY);
+  registry.register(new StubProvider());
+
+  const hasKey = typeof env["OPENAI_API_KEY"] === "string" && env["OPENAI_API_KEY"].trim() !== "";
+  return { orchestrator, providerId: hasKey ? "openai" : "stub" };
 }

@@ -60,10 +60,49 @@ export type {
 } from "./blueprint/index.js";
 
 // Integrations
-export { seedKnowledge, conventionsTransform, NAMING_CONVENTIONS_DOC } from "./knowledge.js";
+export {
+  seedKnowledge,
+  conventionsTransform,
+  getConventions,
+  NAMING_CONVENTIONS_DOC,
+} from "./knowledge.js";
 export { buildPrepareWorkflow, WP_PREPARE_WORKFLOW } from "./workflow.js";
-export { buildPromptEngine, WP_META_TEMPLATE, WP_META_BODY } from "./prompts.js";
+export {
+  buildPromptEngine,
+  renderMetaInstruction,
+  renderContentPlanInstruction,
+  WP_META_TEMPLATE,
+  WP_META_BODY,
+  WP_META_AI_TEMPLATE,
+  WP_META_AI_BODY,
+  WP_CONTENT_PLAN_TEMPLATE,
+  WP_CONTENT_PLAN_BODY,
+} from "./prompts.js";
 export type { PromptEngineInstance } from "./prompts.js";
+export {
+  resilientAiRunner,
+  metaFinalizeTransform,
+  sanitizeMeta,
+  isFallback,
+  STUB_MARKER,
+} from "./ai-meta.js";
+export {
+  parseContentPlan,
+  validateContentPlan,
+  deterministicContentPlan,
+  buildContentPlan,
+  sanitizeText,
+  contentPlanTransform,
+  CONTENT_PLAN_FIELD_TRANSFORMS,
+} from "./content-plan.js";
+export type {
+  ContentPlan,
+  ContentPlanCategory,
+  ContentPlanSeo,
+  ContentPlanEnvelope,
+  ContentPlanSource,
+  ContentPlanValidation,
+} from "./content-plan.js";
 
 // Generator, pipeline, wiring, runner
 export { WORDPRESS_NEWS_GENERATOR, buildWordPressNewsDefinition } from "./generator.js";

@@ -9,14 +9,17 @@ import { buildPipeline } from "./pipeline.js";
 export const WORDPRESS_NEWS_GENERATOR = "wordpress-news";
 
 /** Build the generator definition (templates + pipeline) for a resolved config. */
-export function buildWordPressNewsDefinition(config: ResolvedWordPressConfig): GeneratorDefinition {
+export function buildWordPressNewsDefinition(
+  config: ResolvedWordPressConfig,
+  aiContentPlanPrompt = "",
+): GeneratorDefinition {
   return {
     id: WORDPRESS_NEWS_GENERATOR,
     name: "WordPress News",
     target: "wordpress",
     version: 1,
     templates: [...allTemplates(), ...componentScaffolds()],
-    pipeline: { steps: buildPipeline(config) },
+    pipeline: { steps: buildPipeline(config, aiContentPlanPrompt) },
     configuration: { target: "wordpress" },
     metadata: { title: config.siteName, target: "wordpress", tags: ["wordpress", "news", "theme"] },
   };

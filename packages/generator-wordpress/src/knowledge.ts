@@ -41,6 +41,16 @@ export async function seedKnowledge(): Promise<KnowledgeService> {
   return service;
 }
 
+/** Retrieve the naming-conventions text from the Knowledge Engine (full-text search). */
+export async function getConventions(service: KnowledgeService): Promise<string> {
+  const hits = await service.search({ text: "naming conventions", limit: 1 });
+  if (isErr(hits)) return NAMING_CONVENTIONS_DOC;
+  const first = hits.value[0];
+  if (first === undefined) return NAMING_CONVENTIONS_DOC;
+  const document = await service.getDocument(first.documentId);
+  return isErr(document) ? NAMING_CONVENTIONS_DOC : document.value.content;
+}
+
 /** A transform that returns the naming conventions retrieved from the Knowledge Engine. */
 export function conventionsTransform(service: KnowledgeService): GeneratorTransform {
   return async () => {

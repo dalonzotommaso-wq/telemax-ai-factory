@@ -86,7 +86,9 @@
       "@telemax/generator-engine": ["packages/generator-engine/dist/index.d.ts"],
       "@telemax/generator-engine/*": ["packages/generator-engine/dist/*"],
       "@telemax/generator-wordpress": ["packages/generator-wordpress/dist/index.d.ts"],
-      "@telemax/generator-wordpress/*": ["packages/generator-wordpress/dist/*"]
+      "@telemax/generator-wordpress/*": ["packages/generator-wordpress/dist/*"],
+      "@telemax/generator-landing": ["packages/generator-landing/dist/index.d.ts"],
+      "@telemax/generator-landing/*": ["packages/generator-landing/dist/*"]
     }
   },
   "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage"]

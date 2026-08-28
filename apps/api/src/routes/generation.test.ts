@@ -13,7 +13,10 @@ async function makeApp(): Promise<FastifyInstance> {
   return buildApp(undefined, { db, workspace });
 }
 
-async function createProject(app: FastifyInstance, payload: Record<string, unknown>): Promise<number> {
+async function createProject(
+  app: FastifyInstance,
+  payload: Record<string, unknown>,
+): Promise<number> {
   const res = await app.inject({ method: "POST", url: "/projects", payload });
   return res.json().id;
 }
@@ -43,6 +46,35 @@ describe("generation", () => {
     const phases = logs.json().map((l: { phase: string }) => l.phase);
     expect(phases).toContain("generator");
     expect(phases).toContain("completed");
+    await app.close();
+  });
+
+  it("really generates a landing-page project and serves it as site.zip", async () => {
+    const app = await makeApp();
+    const id = await createProject(app, {
+      name: "Vetrina",
+      type: "landing-page",
+      generator: "@telemax/generator-landing",
+    });
+
+    const gen = await app.inject({ method: "POST", url: `/projects/${id}/generate` });
+    expect(gen.statusCode).toBe(201);
+    const body = gen.json();
+    expect(body.status).toBe("completed");
+    expect(body.fileCount).toBeGreaterThan(0);
+    expect(body.files.some((f: { path: string }) => f.path === "index.html")).toBe(true);
+
+    const logs = await app.inject({ method: "GET", url: `/projects/${id}/logs` });
+    const phases = logs.json().map((l: { phase: string }) => l.phase);
+    expect(phases).toContain("generator");
+    expect(phases).toContain("completed");
+
+    const zip = await app.inject({ method: "GET", url: `/projects/${id}/download/site` });
+    expect(zip.statusCode).toBe(200);
+    expect(zip.headers["content-type"]).toContain("application/zip");
+    expect(zip.headers["content-disposition"]).toContain("-site.zip");
+    expect(zip.rawPayload[0]).toBe(0x50);
+    expect(zip.rawPayload[1]).toBe(0x4b);
     await app.close();
   });
 

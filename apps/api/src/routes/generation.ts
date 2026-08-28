@@ -1,6 +1,6 @@
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
-import type { FastifyInstance } from "fastify";
+import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import { getProject } from "../repositories/project-repository.js";
 import {
   latestGenerationForProject,
@@ -70,25 +70,41 @@ export async function generationRoutes(app: FastifyInstance): Promise<void> {
     },
   );
 
-  // Download the generated theme as a ZIP archive.
+  // Download the generated project as a ZIP archive. `/download/theme` is kept
+  // as a backward-compatible alias of `/download/site`.
+  const sendSiteZip = (
+    request: FastifyRequest,
+    reply: FastifyReply,
+    suffix: "site" | "theme",
+  ): unknown => {
+    const id = parseId((request.params as { id: string }).id);
+    if (id === null) return reply.code(400).send({ error: "Invalid id" });
+    const project = getProject(db, id);
+    if (!project) return reply.code(404).send({ error: "Project not found" });
+    const zipPath = join(app.workspace.pathFor(project), "export", "site.zip");
+    if (!existsSync(zipPath)) {
+      return reply.code(404).send({ error: "Site archive not found — generate the project first" });
+    }
+    return reply
+      .header("Content-Type", "application/zip")
+      .header("Content-Disposition", `attachment; filename="${project.slug}-${suffix}.zip"`)
+      .send(readFileSync(zipPath));
+  };
+
+  app.get(
+    "/projects/:id/download/site",
+    { schema: { description: "Download the generated project as site.zip.", tags: ["projects"] } },
+    async (request, reply) => sendSiteZip(request, reply, "site"),
+  );
+
   app.get(
     "/projects/:id/download/theme",
-    { schema: { description: "Download the generated theme as theme.zip.", tags: ["projects"] } },
-    async (request, reply) => {
-      const id = parseId((request.params as { id: string }).id);
-      if (id === null) return reply.code(400).send({ error: "Invalid id" });
-      const project = getProject(db, id);
-      if (!project) return reply.code(404).send({ error: "Project not found" });
-      const zipPath = join(app.workspace.pathFor(project), "export", "theme.zip");
-      if (!existsSync(zipPath)) {
-        return reply
-          .code(404)
-          .send({ error: "Theme archive not found — generate the project first" });
-      }
-      return reply
-        .header("Content-Type", "application/zip")
-        .header("Content-Disposition", `attachment; filename="${project.slug}-theme.zip"`)
-        .send(readFileSync(zipPath));
+    {
+      schema: {
+        description: "Alias of /download/site (backward compatibility).",
+        tags: ["projects"],
+      },
     },
+    async (request, reply) => sendSiteZip(request, reply, "theme"),
   );
 }

@@ -76,11 +76,11 @@ pnpm format        # apply Prettier formatting
 
 ## Applications
 
-| App                 | Path              | Responsibility                                            |
-| ------------------- | ----------------- | --------------------------------------------------------- |
-| `@telemax/api`      | `apps/api/`       | Fastify REST API — projects and live system status.       |
-| `@telemax/dashboard`| `apps/dashboard/` | Next.js control plane — Projects, wizard and System page. |
-| `@telemax/worker`   | `apps/worker/`    | BullMQ background worker.                                  |
+| App                  | Path              | Responsibility                                            |
+| -------------------- | ----------------- | --------------------------------------------------------- |
+| `@telemax/api`       | `apps/api/`       | Fastify REST API — projects and live system status.       |
+| `@telemax/dashboard` | `apps/dashboard/` | Next.js control plane — Projects, wizard and System page. |
+| `@telemax/worker`    | `apps/worker/`    | BullMQ background worker.                                 |
 
 ## Project Manager Engine
 
@@ -97,6 +97,19 @@ The "New project" wizard reads the installed generators, knowledge packs and AI
 providers live from the repository scan (`GET /system/status`) — nothing is
 hard-coded.
 
+### Generators
+
+Two concrete generators ship today. `apps/api` selects one per project through a
+`GeneratorAdapter` registry (`apps/api/src/services/generators/`):
+
+| Project type     | Package                        | Output                                               |
+| ---------------- | ------------------------------ | ---------------------------------------------------- |
+| `wordpress-news` | `@telemax/generator-wordpress` | WordPress News theme directory                       |
+| `landing-page`   | `@telemax/generator-landing`   | Single-page static HTML/CSS landing site ("vetrina") |
+
+Both write copy through the same AI **Content Plan** mechanism (AI → JSON →
+validate against a typed contract → sanitise → deterministic fallback).
+
 ### API endpoints
 
 ```
@@ -105,6 +118,8 @@ GET    /system/status | /packages | /apps | /git   # repository scan
 GET    /projects            POST   /projects
 GET    /projects/:id        PUT    /projects/:id     DELETE /projects/:id
 POST   /projects/:id/archive        POST   /projects/:id/duplicate
+POST   /projects/:id/generate      GET    /projects/:id/generation | /logs
+GET    /projects/:id/download/site  # generated project as site.zip (/download/theme is an alias)
 GET    /docs                                    # Swagger UI (OpenAPI)
 ```
 

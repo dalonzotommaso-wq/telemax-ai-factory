@@ -281,21 +281,32 @@ export async function generateProject(id: number): Promise<Generation> {
   return (await res.json()) as Generation;
 }
 
-export async function fetchGeneration(id: number, signal?: AbortSignal): Promise<Generation | null> {
+export async function fetchGeneration(
+  id: number,
+  signal?: AbortSignal,
+): Promise<Generation | null> {
   const res = await fetch(`${API_URL}/projects/${id}/generation`, { signal, cache: "no-store" });
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`Generation failed: ${res.status}`);
   return (await res.json()) as Generation;
 }
 
-export async function fetchGenerationLogs(id: number, signal?: AbortSignal): Promise<GenerationLog[]> {
+export async function fetchGenerationLogs(
+  id: number,
+  signal?: AbortSignal,
+): Promise<GenerationLog[]> {
   const res = await fetch(`${API_URL}/projects/${id}/logs`, { signal, cache: "no-store" });
   if (res.status === 404) return [];
   if (!res.ok) throw new Error(`Logs failed: ${res.status}`);
   return (await res.json()) as GenerationLog[];
 }
 
-/** Direct URL to download the generated theme ZIP for a project. */
+/** Direct URL to download the generated project ZIP (`site.zip`). */
+export function siteDownloadUrl(id: number): string {
+  return `${API_URL}/projects/${id}/download/site`;
+}
+
+/** @deprecated Use {@link siteDownloadUrl}. Kept for backward compatibility. */
 export function themeDownloadUrl(id: number): string {
   return `${API_URL}/projects/${id}/download/theme`;
 }

@@ -74,6 +74,9 @@ importers:
       '@telemax/generator-engine':
         specifier: workspace:*
         version: link:../../packages/generator-engine
+      '@telemax/generator-landing':
+        specifier: workspace:*
+        version: link:../../packages/generator-landing
       '@telemax/generator-wordpress':
         specifier: workspace:*
         version: link:../../packages/generator-wordpress
@@ -232,6 +235,27 @@ importers:
       '@telemax/core':
         specifier: workspace:*
         version: link:../../core
+
+  packages/generator-landing:
+    dependencies:
+      '@telemax/ai':
+        specifier: workspace:*
+        version: link:../ai
+      '@telemax/core':
+        specifier: workspace:*
+        version: link:../../core
+      '@telemax/generator-engine':
+        specifier: workspace:*
+        version: link:../generator-engine
+      '@telemax/knowledge':
+        specifier: workspace:*
+        version: link:../knowledge
+      '@telemax/prompt-engine':
+        specifier: workspace:*
+        version: link:../prompt-engine
+      '@telemax/workflow':
+        specifier: workspace:*
+        version: link:../workflow
 
   packages/generator-wordpress:
     dependencies:

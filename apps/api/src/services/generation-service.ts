@@ -1,36 +1,23 @@
 // -----------------------------------------------------------------------------
 // GenerationService
 //
-// Connects the Project Manager to the existing Generator Engine. It loads the
-// project's workspace/project.json, resolves the installed generator and runs
-// the REAL generation pipeline (Workflow -> Knowledge -> Prompt -> AI ->
-// Generator Engine -> Output) using only the code already shipped in the
-// @telemax/* packages. Every phase, every produced file and the final status
-// are recorded in the database.
+// Connects the Project Manager to the Generator Engine. It loads the project's
+// workspace/project.json, resolves the installed generator adapter (see
+// ./generators/registry) and runs the REAL generation pipeline (Workflow ->
+// Knowledge -> Prompt -> AI -> Generator Engine -> Output) using only the code
+// already shipped in the @telemax/* packages. Every phase, every produced file
+// and the final status are recorded in the database, and the output is packaged
+// into export/site.zip.
 // -----------------------------------------------------------------------------
 import { existsSync, mkdirSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { createHash } from "node:crypto";
 import { deflateRawSync } from "node:zlib";
-import { isErr, ServiceContainer } from "@telemax/core";
-import { registerAIOrchestratorFromEnv } from "@telemax/ai";
-import { GeneratorEngine } from "@telemax/generator-engine";
-import { WorkflowEngine } from "@telemax/workflow";
-import {
-  assembleVariables,
-  buildPromptEngine,
-  registerWordPressNews,
-  resilientAiRunner,
-  resolveWordPressConfig,
-  seedKnowledge,
-  validateProject,
-  writeProject,
-  WORDPRESS_NEWS_GENERATOR,
-  type WordPressSiteConfig,
-} from "@telemax/generator-wordpress";
 import type { Db } from "../db.js";
 import type { Project } from "../domain.js";
 import type { WorkspaceService } from "./workspace-service.js";
+import type { ProjectManifest } from "./generators/adapter.js";
+import { resolveAdapter } from "./generators/registry.js";
 import {
   addFile,
   addLog,
@@ -39,16 +26,6 @@ import {
   getGeneration,
   type Generation,
 } from "../repositories/generation-repository.js";
-
-interface ProjectManifest {
-  name?: string;
-  slug?: string;
-  generator?: string;
-  workflow?: string;
-  knowledgePack?: string;
-  aiProvider?: string;
-  type?: string;
-}
 
 /** Recursively list every file under a directory (absolute paths). */
 function walkFiles(dir: string): string[] {
@@ -162,77 +139,28 @@ export class GenerationService {
       // ---- Preparation: load project.json and resolve the target generator ----
       log("preparation", "Loading workspace/project.json");
       const manifest = this.loadManifest(project);
-      const generatorId = manifest.generator || project.generator;
+      const adapter = resolveAdapter(project, manifest);
       log(
         "preparation",
-        `Project "${manifest.name ?? project.name}" — generator=${generatorId || "none"}, ` +
+        `Project "${manifest.name ?? project.name}" — generator=${adapter.id}, ` +
           `workflow=${manifest.workflow || "-"}, knowledge=${manifest.knowledgePack || "-"}, ` +
           `provider=${manifest.aiProvider || "-"}`,
       );
 
-      const isWordPress =
-        generatorId.includes("generator-wordpress") ||
-        (manifest.type ?? project.type) === "wordpress-news";
-      if (!isWordPress) {
-        throw new Error(
-          `No runnable generator installed for "${generatorId || project.type}". ` +
-            `The only installed generator is @telemax/generator-wordpress.`,
-        );
-      }
-
-      const config: WordPressSiteConfig = {
-        siteName: manifest.name ?? project.name,
-        siteUrl: `https://${project.slug}.telemax.local`,
-      };
-      const validation = validateProject(config);
-      if (isErr(validation)) throw new Error(validation.error.message);
-      const resolved = resolveWordPressConfig(config);
-
-      // ---- Knowledge ----
-      log(
-        "knowledge",
-        `Seeding knowledge base (${manifest.knowledgePack || "@telemax/knowledge"})`,
-      );
-      const knowledge = await seedKnowledge();
-
-      // ---- Workflow ----
-      log("workflow", "Initialising workflow engine");
-      const workflow = new WorkflowEngine();
-
-      // ---- AI / Prompt ----
-      const prompt = await buildPromptEngine();
-      const ai = registerAIOrchestratorFromEnv(new ServiceContainer());
-      log("ai", `AI provider: ${ai.providerId}`);
-
-      // ---- Generator Engine ----
-      log("generator", "Registering generator and producing artifacts");
-      const generator = new GeneratorEngine({ ai: resilientAiRunner(ai.orchestrator) });
-      const registered = await registerWordPressNews(
-        { generator, workflow, prompt, knowledge },
-        resolved,
-      );
-      if (isErr(registered)) throw new Error(registered.error.message);
+      // ---- Run the resolved generator adapter (Knowledge -> Workflow -> AI -> Engine -> Output) ----
       const generatedAt = new Date().toISOString();
-      const produced = await generator.generate(
-        WORDPRESS_NEWS_GENERATOR,
-        assembleVariables(resolved, new Date().getFullYear(), generatedAt),
-      );
-      if (isErr(produced)) throw new Error(produced.error.message);
+      const runResult = await adapter.run({
+        project,
+        manifest,
+        outputDir,
+        generatedAt,
+        year: new Date().getFullYear(),
+        log,
+      });
 
       // Content Plan observability: AI vs deterministic fallback + validation.
-      const envelope = produced.value.variables["contentPlanEnvelope"] as
-        | { readonly source?: string; readonly validation?: string }
-        | undefined;
-      const source = envelope?.source === "ai" ? "generated" : "fallback";
-      const cpValidation = envelope?.validation === "failed" ? "failed" : "passed";
-      log("ai", `Content Plan: ${source}`);
-      log("ai", `Validation: ${cpValidation}`);
-
-      // ---- Writing output ----
-      const artifacts = produced.value.artifacts.list();
-      log("writing", `Writing ${String(artifacts.length)} artifacts to output/`);
-      const written = writeProject(artifacts, outputDir, { generatedAt });
-      if (isErr(written)) throw new Error(written.error.message);
+      log("ai", `Content Plan: ${runResult.contentPlan.source}`);
+      log("ai", `Validation: ${runResult.contentPlan.validation}`);
 
       // ---- Register every produced file (name, path, size, hash, timestamp) ----
       for (const abs of walkFiles(outputDir)) {
@@ -246,8 +174,8 @@ export class GenerationService {
         });
       }
 
-      // ---- Export: package the generated theme into export/theme.zip ----
-      log("writing", "Packaging theme into export/theme.zip");
+      // ---- Export: package the generated project into export/site.zip ----
+      log("writing", "Packaging project into export/site.zip");
       const exportDir = join(this.workspace.pathFor(project), "export");
       mkdirSync(exportDir, { recursive: true });
       const zipEntries = walkFiles(outputDir).map((abs) => ({
@@ -255,14 +183,13 @@ export class GenerationService {
         data: readFileSync(abs),
       }));
       const zipData = buildZip(zipEntries);
-      const zipPath = join(exportDir, "theme.zip");
-      writeFileSync(zipPath, zipData);
-      log("writing", `Theme packaged (${String(zipData.byteLength)} bytes) at export/theme.zip`);
+      writeFileSync(join(exportDir, "site.zip"), zipData);
+      log("writing", `Project packaged (${String(zipData.byteLength)} bytes) at export/site.zip`);
 
-      log("completed", `Generation completed — ${String(written.value.fileCount)} files`);
+      log("completed", `Generation completed — ${String(runResult.fileCount)} files`);
       return finishGeneration(this.db, id, {
         status: "completed",
-        fileCount: written.value.fileCount,
+        fileCount: runResult.fileCount,
         outputDir,
       });
     } catch (error) {

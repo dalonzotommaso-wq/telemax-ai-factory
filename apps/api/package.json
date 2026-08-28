@@ -20,6 +20,7 @@
     "@telemax/ai": "workspace:*",
     "@telemax/core": "workspace:*",
     "@telemax/generator-engine": "workspace:*",
+    "@telemax/generator-landing": "workspace:*",
     "@telemax/generator-wordpress": "workspace:*",
     "@telemax/workflow": "workspace:*",
     "better-sqlite3": "11.8.1",

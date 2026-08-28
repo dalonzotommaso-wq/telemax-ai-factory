@@ -9,9 +9,11 @@ import {
   fetchGeneration,
   fetchGenerationLogs,
   generateProject,
-  themeDownloadUrl,
+  getProject,
+  siteDownloadUrl,
   type Generation,
   type GenerationLog,
+  type Project,
 } from "@/lib/api";
 
 const PHASES: { key: string; label: string }[] = [
@@ -33,6 +35,7 @@ export default function GenerationDetailsPage() {
   const params = useParams<{ id: string }>();
   const projectId = Number(params.id);
   const [gen, setGen] = useState<Generation | null>(null);
+  const [project, setProject] = useState<Project | null>(null);
   const [logs, setLogs] = useState<GenerationLog[]>([]);
   const [regenerating, setRegenerating] = useState(false);
   const [copied, setCopied] = useState<string | null>(null);
@@ -48,6 +51,20 @@ export default function GenerationDetailsPage() {
     },
     [projectId],
   );
+
+  useEffect(() => {
+    let cancelled = false;
+    void getProject(projectId)
+      .then((p) => {
+        if (!cancelled) setProject(p);
+      })
+      .catch(() => {
+        /* project stays null; download falls back to the generic label */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [projectId]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -136,7 +153,9 @@ export default function GenerationDetailsPage() {
             <CardContent>
               <ol className="space-y-2">
                 {PHASES.map((phase) => {
-                  const done = reached.has(phase.key) || (phase.key === "completed" && gen.status === "completed");
+                  const done =
+                    reached.has(phase.key) ||
+                    (phase.key === "completed" && gen.status === "completed");
                   const active = gen.status === "running" && !done;
                   return (
                     <li key={phase.key} className="flex items-center gap-3 text-sm">
@@ -193,18 +212,32 @@ export default function GenerationDetailsPage() {
                 </div>
               </div>
               <div className="flex flex-wrap gap-2">
-                <Button variant="outline" size="sm" onClick={() => void copy("workspace", workspaceDir)}>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => void copy("workspace", workspaceDir)}
+                >
                   Apri Workspace
                 </Button>
-                <Button variant="outline" size="sm" onClick={() => void copy("output", gen.outputDir)}>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => void copy("output", gen.outputDir)}
+                >
                   Apri Output
                 </Button>
-                <Button variant="outline" size="sm" onClick={() => void copy("folder", workspaceDir)}>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={() => void copy("folder", workspaceDir)}
+                >
                   Apri Cartella
                 </Button>
                 {gen.status === "completed" && (
-                  <a href={themeDownloadUrl(projectId)} download>
-                    <Button size="sm">SCARICA TEMA</Button>
+                  <a href={siteDownloadUrl(projectId)} download>
+                    <Button size="sm">
+                      {project?.type === "landing-page" ? "SCARICA SITO" : "SCARICA TEMA"}
+                    </Button>
                   </a>
                 )}
                 <Button
@@ -264,7 +297,9 @@ export default function GenerationDetailsPage() {
               <div className="max-h-72 overflow-auto p-4 font-mono text-xs">
                 {logs.map((l) => (
                   <div key={l.id} className={l.level === "error" ? "text-red-600" : ""}>
-                    <span className="text-muted-foreground">{new Date(l.ts).toLocaleTimeString()}</span>{" "}
+                    <span className="text-muted-foreground">
+                      {new Date(l.ts).toLocaleTimeString()}
+                    </span>{" "}
                     <span className="font-semibold">[{l.phase}]</span> {l.message}
                   </div>
                 ))}

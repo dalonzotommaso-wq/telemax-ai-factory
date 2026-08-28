@@ -41,7 +41,7 @@ describe("system routes", () => {
     await app.inject({ method: "POST", url: "/projects", payload: { name: "P", type: "react" } });
     const after = await app.inject({ method: "GET", url: "/stats" });
     expect(after.json().projects).toBe(1);
-    expect(after.json().packages).toBe(9);
+    expect(after.json().packages).toBe(10);
     await app.close();
   });
 });

@@ -16,6 +16,8 @@ This directory documents the architecture of Telemax AI Factory.
   Generator Engine specification (`@telemax/generator-engine`).
 - [`../SPEC-007-WordPress-News-Generator.md`](../SPEC-007-WordPress-News-Generator.md) — the
   WordPress News generator specification (`@telemax/generator-wordpress`).
+- [`../SPEC-008-Landing-Page-Generator.md`](../SPEC-008-Landing-Page-Generator.md) — the
+  Landing Page generator specification (`@telemax/generator-landing`).
 - [`adr/`](adr/) — Architecture Decision Records: one file per significant,
   hard-to-reverse decision, capturing its context and consequences.
 
@@ -28,6 +30,7 @@ This directory documents the architecture of Telemax AI Factory.
 - **SPEC-005** — Workflow Engine (`@telemax/workflow`) _(delivered)_
 - **SPEC-006** — Generator Engine (`@telemax/generator-engine`) _(delivered)_
 - **SPEC-007** — WordPress News Generator (`@telemax/generator-wordpress`) _(delivered)_
+- **SPEC-008** — Landing Page Generator (`@telemax/generator-landing`) _(delivered)_
 
 ## Architecture Decision Records
 
@@ -50,3 +53,4 @@ Use [`adr/template.md`](adr/template.md) as the starting point for a new record.
 - [ADR-0009](adr/0009-generator-engine-architecture.md) — Generator Engine architecture
 - [ADR-0010](adr/0010-wordpress-news-generator.md) — WordPress News generator architecture
 - [ADR-0011](adr/0011-project-writer-and-cli.md) — Filesystem project writer and demo CLI
+- [ADR-0012](adr/0012-landing-page-generator.md) — Landing Page generator and API generator-adapter registry

@@ -15,7 +15,7 @@ describe("system routes", () => {
     expect(res.statusCode).toBe(200);
     const body = res.json();
     expect(body.repository.name).toBe("@telemax/ai-factory");
-    expect(body.counts.packages).toBe(9);
+    expect(body.counts.packages).toBe(10);
     expect(body.counts.apps).toBe(3);
     expect(body.counts.endpoints).toBeGreaterThan(0);
     expect(Array.isArray(body.packages)).toBe(true);

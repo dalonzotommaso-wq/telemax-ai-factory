@@ -7,6 +7,25 @@ are documented here. Per-package changes live in each package's own
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+
+### Added
+
+- **Second generator — `@telemax/generator-landing`.** Produces a single-page
+  static HTML/CSS landing page ("vetrina") via the Generator Engine, with
+  AI-written copy through the same Content Plan mechanism as
+  `@telemax/generator-wordpress`. See
+  [SPEC-008](docs/SPEC-008-Landing-Page-Generator.md) and
+  [ADR-0012](docs/architecture/adr/0012-landing-page-generator.md).
+- **API generator-adapter registry.** `apps/api/src/services/generators/` replaces
+  the hard-coded WordPress dispatch in `GenerationService` with a
+  `GeneratorAdapter` contract, one adapter per generator package and a
+  `resolveAdapter` registry; adding a target is its adapter plus one line.
+- **Generalised download.** Generation now packages `workspace/<slug>/export/site.zip`
+  and serves it from `GET /projects/:id/download/site`; `GET /projects/:id/download/theme`
+  is kept as a backward-compatible alias. The dashboard generation page labels the
+  download button per project type.
+
 ## [0.2.0] - 2026-08-04
 
 Second milestone. The dashboard becomes the real control plane and Projects become
@@ -18,13 +37,13 @@ framework is wired into the platform apps.
 - **Platform System integration.** `RepositoryService` performs a real scan of the
   monorepo (packages, apps, generators, knowledge packs, workflow, AI providers, tests,
   build artifacts, git) exposed via `GET /system/status | /system/packages | /system/apps |
-  /system/git`. New Dashboard System page and live Home stat cards; all previously
+/system/git`. New Dashboard System page and live Home stat cards; all previously
   hard-coded statistics removed.
 - **Project Manager Engine v1.** The full Project model (uuid, slug, name, description,
   client, category, type, stack, generator, workflow, knowledge pack, AI provider, version,
   status, workspace, timestamps). On creation each project persists to SQLite **and**
   materialises a real workspace on disk (`workspace/<slug>/{docs,assets,prompts,output,logs,
-  uploads,build}` + `project.json`). Six-step "New project" wizard populated live from the
+uploads,build}` + `project.json`). Six-step "New project" wizard populated live from the
   repository scan. New endpoints `POST /projects/:id/archive` and
   `POST /projects/:id/duplicate`. Recent projects on the Home page.
 - **Project Generation Engine.** `GenerationService` connects the Project Manager to the
